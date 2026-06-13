@@ -409,7 +409,10 @@ Self-driven penetration testing research and Capture the Flag participation. Foc
 ## 〔 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=7&title=Stars,Followers,Commits,Repositories,PullRequest,Issues,Reviews" />
+  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=4" />
+</p>
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=4&row=2" />
 </p>
 
 ---
@@ -426,9 +429,9 @@ Self-driven penetration testing research and Capture the Flag participation. Foc
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-snake.svg" />
-    <img alt="github contribution snake" src="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution snake" src="https://raw.githubusercontent.com/parothegreat/parothegreat/output/github-contribution-grid-snake-dark.svg" />
   </picture>
 </p>
 
