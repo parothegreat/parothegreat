@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25,30&height=200&section=header&text=Moehammad%20Alvaro%20Pirata%20Prayogo&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=SysAdmin%20%26%20Penetration%20Tester%20%7C%20Linux%20%7C%20Networking%20%7C%20Infra&descAlignY=58&descSize=16&animation=fadeIn" width="100%" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=36&duration=1&pause=99999&color=7C3AED&center=true&vCenter=true&width=900&height=80&lines=Moehammad+Alvaro+Pirata+Prayogo" alt="Name Header" />
+</p>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=16&duration=1&pause=99999&color=A78BFA&center=true&vCenter=true&width=900&height=30&lines=SysAdmin+%26+Penetration+Tester+%7C+Linux+%7C+Networking+%7C+Infrastructure" alt="Subtitle" />
 </p>
 
 <p align="center">
@@ -409,10 +412,7 @@ Self-driven penetration testing research and Capture the Flag participation. Foc
 ## 〔 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=4" />
-</p>
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=4&row=2" />
+  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=10&column=-1" />
 </p>
 
 ---
@@ -496,5 +496,8 @@ open_to:
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25,30&height=120&section=footer&animation=fadeIn" width="100%" />
-</p># README.md
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=300&size=13&duration=1&pause=99999&color=4C1D95&center=true&vCenter=true&width=900&height=20&lines=────────────────────────────────────────────────────────" alt="footer divider" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with%20%E2%99%A5%20by-parothegreat-7C3AED?style=flat-square&logoColor=white" />
+</p>
