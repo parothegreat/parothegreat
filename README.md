@@ -46,7 +46,7 @@ I enjoy systems that are practical, measurable, and useful: RFID access control,
 ## Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,bash,python,html,css&theme=dark&perline=9" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,bash,python,html,css,rust&theme=dark&perline=9" alt="Languages" />
   <br />
   <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,nodejs,express,vite&theme=dark&perline=9" alt="Web stack" />
   <br />
