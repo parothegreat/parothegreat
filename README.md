@@ -198,12 +198,22 @@ exploring:
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parothegreat&layout=compact&theme=midnight-purple&hide_border=true&bg_color=0D0D1A&title_color=8B5CF6&text_color=E9D5FF&langs_count=8" width="48%" alt="Top languages" />
-  <img src="https://github-profile-trophy.vercel.app/?username=parothegreat&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=4" width="48%" alt="GitHub trophies" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parothegreat&layout=compact&theme=midnight-purple&hide_border=true&bg_color=0D0D1A&title_color=8B5CF6&text_color=E9D5FF&langs_count=8" width="55%" alt="Top languages" />
 </p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=parothegreat&bg_color=0D0D1A&color=A78BFA&line=8B5CF6&point=E9D5FF&area=true&area_color=4C1D95&hide_border=true&custom_title=Contribution%20Activity" width="96%" alt="Contribution activity graph" />
+</p>
+
+---
+
+## Highlights
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Focus-Infrastructure%20Security-8B5CF6?style=for-the-badge&logo=linux&logoColor=white" alt="Infrastructure Security" />
+  <img src="https://img.shields.io/badge/Built-RFID%20Access%20System-7C3AED?style=for-the-badge&logo=go&logoColor=white" alt="RFID Access System" />
+  <img src="https://img.shields.io/badge/Shipped-HTTP%20Monitor-6D28D9?style=for-the-badge&logo=githubactions&logoColor=white" alt="HTTP Monitor" />
+  <img src="https://img.shields.io/badge/Active-teamitmivhs%20Contributor-4C1D95?style=for-the-badge&logo=github&logoColor=white" alt="teamitmivhs Contributor" />
 </p>
 
 ---
