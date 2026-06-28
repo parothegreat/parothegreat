@@ -8,22 +8,22 @@
 
 <p align="center">
   <a href="https://parothegreat.site">
-    <img src="https://img.shields.io/badge/Portfolio-parothegreat.site-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=white&labelColor=8B5CF6" alt="Portfolio" />
   </a>
   <a href="https://linkedin.com/in/moehammad-alvaro-pirata-prayogo-842a8834a">
-    <img src="https://img.shields.io/badge/LinkedIn-Alvaro%20Prayogo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" alt="LinkedIn" />
   </a>
   <a href="mailto:alvaroprayogo38@gmail.com">
-    <img src="https://img.shields.io/badge/Email-alvaroprayogo38@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=white&labelColor=EA4335" alt="Email" />
   </a>
   <a href="https://github.com/parothegreat">
-    <img src="https://img.shields.io/badge/GitHub-parothegreat-18181B?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white&labelColor=181717" alt="GitHub" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Cikarang%20Selatan%2C%20Indonesia-27272A?style=flat-square&logo=googlemaps&logoColor=white" alt="Location" />
-  <img src="https://img.shields.io/badge/UTC%2B7%20%7C%20WIB-3F3F46?style=flat-square&logo=clockify&logoColor=white" alt="Timezone" />
+  <img src="https://img.shields.io/badge/Cikarang%20Selatan,%20Indonesia-0D1117?style=flat-square&logo=googlemaps&logoColor=white&labelColor=27272A" alt="Location" />
+  <img src="https://img.shields.io/badge/UTC%2B7%20%7C%20WIB-0D1117?style=flat-square&logo=clockify&logoColor=white&labelColor=3F3F46" alt="Timezone" />
   <img src="https://komarev.com/ghpvc/?username=parothegreat&label=Profile%20Views&color=8B5CF6&style=flat-square" alt="Profile views" />
 </p>
 
@@ -70,11 +70,28 @@ I am currently focused on Linux system administration, Docker-based deployments,
 ## Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,bash,python,html,css,rust&theme=dark&perline=9" alt="Languages" />
-  <br />
-  <img src="https://skillicons.dev/icons?i=linux,docker,nginx,postgres,mysql,redis,git,githubactions,vim&theme=dark&perline=9" alt="Infrastructure stack" />
-  <br />
-  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,nodejs,express,vite&theme=dark&perline=9" alt="Web stack" />
+  <img src="https://skillicons.dev/icons?i=linux,ubuntu,fedora,docker,nginx,git,githubactions,bash,vim&theme=dark&perline=9" alt="Infrastructure and Linux tools" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,python,rust,nodejs,express&theme=dark&perline=9" alt="Programming and backend tools" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,mongodb,prometheus,grafana,cloudflare&theme=dark&perline=9" alt="Databases, monitoring, and cloud tools" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,html,css&theme=dark&perline=9" alt="Frontend and web tools" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=white&labelColor=FCC624" alt="Linux" />
+  <img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&logoColor=white&labelColor=2496ED" alt="Docker" />
+  <img src="https://img.shields.io/badge/Nginx-0D1117?style=for-the-badge&logo=nginx&logoColor=white&labelColor=009639" alt="Nginx" />
+  <img src="https://img.shields.io/badge/Go-0D1117?style=for-the-badge&logo=go&logoColor=white&labelColor=00ADD8" alt="Go" />
+  <img src="https://img.shields.io/badge/Grafana-0D1117?style=for-the-badge&logo=grafana&logoColor=white&labelColor=F46800" alt="Grafana" />
+  <img src="https://img.shields.io/badge/Prometheus-0D1117?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=E6522C" alt="Prometheus" />
 </p>
 
 ---
@@ -233,12 +250,15 @@ operations:
 ## Certifications & Learning
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Cisco-Networking%20Essentials-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Networking Essentials" />
-  <img src="https://img.shields.io/badge/Cisco-Linux%20Essentials-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Linux Essentials" />
-  <img src="https://img.shields.io/badge/Cisco-Cybersecurity%20Essentials-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Cybersecurity Essentials" />
-  <img src="https://img.shields.io/badge/NDG-Linux%20Essentials-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="NDG Linux Essentials" />
-  <img src="https://img.shields.io/badge/Google-Cloud%20Fundamentals-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud Fundamentals" />
-  <img src="https://img.shields.io/badge/Security-Ethical%20Hacking%20Essentials-7C3AED?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Ethical Hacking Essentials" />
+  <img src="https://img.shields.io/badge/Cisco-Networking%20Essentials-0D1117?style=for-the-badge&logo=cisco&logoColor=white&labelColor=1BA0D7" alt="Cisco Networking Essentials" />
+  <img src="https://img.shields.io/badge/Cisco-Linux%20Essentials-0D1117?style=for-the-badge&logo=cisco&logoColor=white&labelColor=1BA0D7" alt="Cisco Linux Essentials" />
+  <img src="https://img.shields.io/badge/Cisco-Cybersecurity%20Essentials-0D1117?style=for-the-badge&logo=cisco&logoColor=white&labelColor=1BA0D7" alt="Cisco Cybersecurity Essentials" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/NDG-Linux%20Essentials-0D1117?style=for-the-badge&logo=linux&logoColor=white&labelColor=FCC624" alt="NDG Linux Essentials" />
+  <img src="https://img.shields.io/badge/Google%20Cloud-Fundamentals-0D1117?style=for-the-badge&logo=googlecloud&logoColor=white&labelColor=4285F4" alt="Google Cloud Fundamentals" />
+  <img src="https://img.shields.io/badge/Security-Ethical%20Hacking%20Essentials-0D1117?style=for-the-badge&logo=kalilinux&logoColor=white&labelColor=7C3AED" alt="Ethical Hacking Essentials" />
 </p>
 
 ---
@@ -273,8 +293,16 @@ exploring:
 ## GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=parothegreat&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0D0D1A&title_color=8B5CF6&icon_color=A78BFA&text_color=E9D5FF&ring_color=8B5CF6&include_all_commits=true&count_private=true" width="49%" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parothegreat&layout=compact&theme=midnight-purple&hide_border=true&bg_color=0D0D1A&title_color=8B5CF6&text_color=E9D5FF&langs_count=8" width="49%" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=parothegreat&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&ring_color=8B5CF6&include_all_commits=true&count_private=true" width="49%" alt="GitHub stats" />
+  <img src="https://streak-stats.demolab.com?user=parothegreat&theme=midnight-purple&hide_border=true&background=0D1117&stroke=8B5CF6&ring=8B5CF6&fire=A855F7&currStreakLabel=E5E7EB&sideLabels=E5E7EB&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=A78BFA" width="49%" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parothegreat&layout=compact&theme=midnight-purple&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=E5E7EB&langs_count=8" width="49%" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=parothegreat&bg_color=0D1117&color=A78BFA&line=8B5CF6&point=E5E7EB&area=true&area_color=4C1D95&hide_border=true&custom_title=Contribution%20Activity" width="96%" alt="Contribution activity graph" />
 </p>
 
 ---
@@ -283,13 +311,13 @@ exploring:
 
 <p align="center">
   <a href="https://leetcode.com/parothegreat">
-    <img src="https://img.shields.io/badge/LeetCode-parothegreat-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" />
+    <img src="https://img.shields.io/badge/LeetCode-0D1117?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=FFA116" alt="LeetCode" />
   </a>
   <a href="https://www.hackerrank.com/parothegreat">
-    <img src="https://img.shields.io/badge/HackerRank-parothegreat-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank" />
+    <img src="https://img.shields.io/badge/HackerRank-0D1117?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=00EA64" alt="HackerRank" />
   </a>
   <a href="https://tryhackme.com/p/parothegreat">
-    <img src="https://img.shields.io/badge/TryHackMe-parothegreat-212C42?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe" />
+    <img src="https://img.shields.io/badge/TryHackMe-0D1117?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=212C42" alt="TryHackMe" />
   </a>
 </p>
 
@@ -298,10 +326,10 @@ exploring:
 ## Highlights
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-Linux%20Infrastructure-8B5CF6?style=for-the-badge&logo=linux&logoColor=white" alt="Linux Infrastructure" />
-  <img src="https://img.shields.io/badge/Built-RFID%20Access%20System-7C3AED?style=for-the-badge&logo=go&logoColor=white" alt="RFID Access System" />
-  <img src="https://img.shields.io/badge/Shipped-HTTP%20Monitor-6D28D9?style=for-the-badge&logo=githubactions&logoColor=white" alt="HTTP Monitor" />
-  <img src="https://img.shields.io/badge/Active-teamitmivhs%20Contributor-4C1D95?style=for-the-badge&logo=github&logoColor=white" alt="teamitmivhs Contributor" />
+  <img src="https://img.shields.io/badge/Focus-Linux%20Infrastructure-0D1117?style=for-the-badge&logo=linux&logoColor=white&labelColor=8B5CF6" alt="Linux Infrastructure" />
+  <img src="https://img.shields.io/badge/Built-RFID%20Access%20System-0D1117?style=for-the-badge&logo=go&logoColor=white&labelColor=7C3AED" alt="RFID Access System" />
+  <img src="https://img.shields.io/badge/Shipped-HTTP%20Monitor-0D1117?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=6D28D9" alt="HTTP Monitor" />
+  <img src="https://img.shields.io/badge/Active-teamitmivhs%20Contributor-0D1117?style=for-the-badge&logo=github&logoColor=white&labelColor=4C1D95" alt="teamitmivhs Contributor" />
 </p>
 
 ---
@@ -310,16 +338,16 @@ exploring:
 
 <p align="center">
   <a href="mailto:alvaroprayogo38@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-alvaroprayogo38@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+    <img src="https://img.shields.io/badge/Gmail-0D1117?style=for-the-badge&logo=gmail&logoColor=white&labelColor=EA4335" alt="Gmail" />
   </a>
   <a href="https://linkedin.com/in/moehammad-alvaro-pirata-prayogo-842a8834a">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" alt="LinkedIn" />
   </a>
   <a href="https://github.com/parothegreat">
-    <img src="https://img.shields.io/badge/GitHub-Follow-18181B?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white&labelColor=181717" alt="GitHub" />
   </a>
   <a href="https://parothegreat.site">
-    <img src="https://img.shields.io/badge/Portfolio-Visit-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=white&labelColor=8B5CF6" alt="Portfolio" />
   </a>
 </p>
 
