@@ -70,29 +70,32 @@ I am currently focused on Linux system administration, Docker-based deployments,
 ## Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,ubuntu,fedora,docker,nginx,git,githubactions,bash,vim&theme=dark&perline=9" alt="Infrastructure and Linux tools" />
+  <img src="https://skillicons.dev/icons?i=linux,ubuntu,docker,nginx,git,githubactions,bash,vim&theme=dark&perline=8" alt="Infrastructure and Linux tools" />
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,python,rust,nodejs,express&theme=dark&perline=9" alt="Programming and backend tools" />
+  <img src="https://skillicons.dev/icons?i=go,typescript,javascript,python,rust,nodejs,express&theme=dark&perline=7" alt="Programming and backend tools" />
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,mongodb,prometheus,grafana,cloudflare&theme=dark&perline=9" alt="Databases, monitoring, and cloud tools" />
+  <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,mongodb,prometheus,grafana,cloudflare&theme=dark&perline=7" alt="Databases, monitoring, and cloud tools" />
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,html,css&theme=dark&perline=9" alt="Frontend and web tools" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,html,css&theme=dark&perline=6" alt="Frontend and web tools" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=white&labelColor=FCC624" alt="Linux" />
+  <img src="https://img.shields.io/badge/Fedora-0D1117?style=for-the-badge&logo=fedora&logoColor=white&labelColor=51A2DA" alt="Fedora" />
+  <img src="https://img.shields.io/badge/Ubuntu-0D1117?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=E95420" alt="Ubuntu" />
   <img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&logoColor=white&labelColor=2496ED" alt="Docker" />
   <img src="https://img.shields.io/badge/Nginx-0D1117?style=for-the-badge&logo=nginx&logoColor=white&labelColor=009639" alt="Nginx" />
   <img src="https://img.shields.io/badge/Go-0D1117?style=for-the-badge&logo=go&logoColor=white&labelColor=00ADD8" alt="Go" />
   <img src="https://img.shields.io/badge/Grafana-0D1117?style=for-the-badge&logo=grafana&logoColor=white&labelColor=F46800" alt="Grafana" />
   <img src="https://img.shields.io/badge/Prometheus-0D1117?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=E6522C" alt="Prometheus" />
 </p>
+
 
 ---
 
@@ -293,7 +296,7 @@ exploring:
 ## GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=parothegreat&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&ring_color=8B5CF6&include_all_commits=true&count_private=true" width="49%" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=parothegreat&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&ring_color=8B5CF6" width="49%" alt="GitHub stats" />
   <img src="https://streak-stats.demolab.com?user=parothegreat&theme=midnight-purple&hide_border=true&background=0D1117&stroke=8B5CF6&ring=8B5CF6&fire=A855F7&currStreakLabel=E5E7EB&sideLabels=E5E7EB&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=A78BFA" width="49%" alt="GitHub streak" />
 </p>
 
