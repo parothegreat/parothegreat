@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=34&duration=1&pause=99999&color=8B5CF6&center=true&vCenter=true&width=900&height=76&lines=Moehammad+Alvaro+Pirata+Prayogo" alt="Moehammad Alvaro Pirata Prayogo" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=34&duration=1&pause=99999&color=8B5CF6&center=true&vCenter=true&width=900&height=76&lines=Alvaro+Prayogo" alt="Alvaro Prayogo" />
 </p>
 
 <p align="center">
