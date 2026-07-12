@@ -16,7 +16,7 @@
     </linearGradient>
     <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="11"/><feComponentTransfer><feFuncA type="table" tableValues="0 .025"/></feComponentTransfer></filter>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <mask id="roleMask"><rect x="0" y="0" width="0" height="28" fill="white"><animate attributeName="width" values="0;405;405;0" keyTimes="0;.28;.86;1" dur="7s" repeatCount="indefinite"/></rect></mask>
+    <mask id="roleMask"><rect x="0" y="-22" width="405" height="28" fill="white"><animate attributeName="width" values="0;405;405;0" keyTimes="0;.28;.86;1" dur="7s" repeatCount="indefinite"/></rect></mask>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#0F172A" stroke-opacity=".025"/></pattern>
   </defs>
 
@@ -73,7 +73,7 @@
       <g transform="translate(476 277)" mask="url(#roleMask)">
         <text y="0" fill="#0F9F8F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">JUNIOR SYSTEMS ADMINISTRATOR</text>
       </g>
-      <rect x="895" y="259" width="8" height="21" fill="#B56B00"><animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/></rect>
+      <rect x="780" y="259" width="8" height="21" fill="#B56B00"><animate attributeName="x" values="476;780;780;476" keyTimes="0;.28;.86;1" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/></rect>
 
       <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
         <text x="476" y="322" fill="#64748B">LOCATION</text><text x="565" y="322" fill="#334155">CIKARANG, INDONESIA</text>
