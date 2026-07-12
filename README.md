@@ -1,49 +1,45 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./light.svg">
-  <img alt="Moehammad Alvaro Pirata Prayogo - Systems and Infrastructure Developer" src="./dark.svg" width="100%">
+  <img src="./dark.svg" width="100%" alt="Alvaro Prayogo — systems, infrastructure, and security">
 </picture>
 
 <p align="center">
-  <a href="https://parothegreat.site">Portfolio</a> ·
-  <a href="https://github.com/parothegreat">GitHub</a> ·
-  <a href="https://linkedin.com/in/moehammad-alvaro-pirata-prayogo-842a8834a">LinkedIn</a> ·
-  <a href="mailto:alvaroprayogo38@gmail.com">Email</a>
+  <a href="https://parothegreat.site"><b>Website</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://linkedin.com/in/moehammad-alvaro-pirata-prayogo-842a8834a"><b>LinkedIn</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:alvaroprayogo38@gmail.com"><b>Email</b></a>
 </p>
 
-## About
+### 01 / Profile
 
-I build practical infrastructure systems, backend services, and internal tools across Linux, networking, monitoring, and security. My current work includes RFID access control, IT work-order workflows, Docker deployments, and Go-based automation.
+Junior Systems Administrator and infrastructure security enthusiast based in Cikarang, Indonesia. I build practical systems around Linux, networking, monitoring, backend services, and internal IT operations.
 
-```yaml
-role: Junior Systems Administrator & Infrastructure Security Enthusiast
-location: Cikarang Selatan, Indonesia
-education: Industrial Electronic Engineering — SMK Mitra Industri MM2100
-focus: Linux, networking, monitoring, backend tools, infrastructure security
-```
+Currently studying Industrial Electronic Engineering at **SMK Mitra Industri MM2100**, while contributing to [teamitmivhs](https://github.com/teamitmivhs) and maintaining infrastructure-focused projects.
 
-## Selected Work
+### 02 / Selected Systems
 
-| Project | What it does | Stack |
-| :-- | :-- | :-- |
-| [RFID Access Control](https://github.com/teamitmivhs/rfid-access-control-system) | Institutional card validation, access logging, and server-room entry control. | `Go` `MariaDB` `REST API` |
-| [work-order](https://github.com/teamitmivhs/work-order) | Searchable and trackable internal IT maintenance workflow. | `Go` `JavaScript` `MariaDB` |
-| [go_http_checker](https://github.com/parothegreat/go_http_checker) | Lightweight endpoint monitoring and infrastructure smoke checks. | `Go` `net/http` `Linux` |
-| [go-bot](https://github.com/parothegreat/go-bot) | Recon and automation utility for authorized security learning and CTFs. | `Go` `CLI` `Concurrency` |
+- **[RFID Access Control](https://github.com/teamitmivhs/rfid-access-control-system)** — card validation, access logs, and controlled server-room entry using Go and MariaDB.
+- **[work-order](https://github.com/teamitmivhs/work-order)** — searchable IT maintenance workflow replacing paper-based reports.
+- **[go_http_checker](https://github.com/parothegreat/go_http_checker)** — lightweight endpoint monitoring and infrastructure smoke checks.
+- **[go-bot](https://github.com/parothegreat/go-bot)** — concurrent CLI tooling for authorized recon, security labs, and CTF practice.
 
-## Toolbox
+### 03 / Working Set
+
+`Linux` · `Fedora` · `Docker` · `Nginx` · `Go` · `TypeScript` · `Python` · `Bash` · `MariaDB` · `PostgreSQL` · `Prometheus` · `Grafana` · `Cloudflare`
+
+### 04 / GitHub
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,fedora,ubuntu,docker,nginx,git,githubactions,bash,go,typescript,javascript,python,nodejs,mysql,postgres,prometheus,grafana,cloudflare&theme=dark&perline=9" alt="Linux, infrastructure, backend, database, and monitoring tools" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=parothegreat&amp;show_icons=true&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=19C3A3&amp;icon_color=E7A93B&amp;text_color=9CA3AF&amp;ring_color=19C3A3">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=parothegreat&amp;show_icons=true&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=087F6D&amp;icon_color=B56B00&amp;text_color=475569&amp;ring_color=087F6D">
+    <img src="https://github-readme-stats-fast.vercel.app/api?username=parothegreat&amp;show_icons=true&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=19C3A3&amp;icon_color=E7A93B&amp;text_color=9CA3AF&amp;ring_color=19C3A3" width="49%" alt="GitHub statistics">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=parothegreat&amp;layout=compact&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=19C3A3&amp;text_color=9CA3AF&amp;langs_count=8">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=parothegreat&amp;layout=compact&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=087F6D&amp;text_color=475569&amp;langs_count=8">
+    <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=parothegreat&amp;layout=compact&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=19C3A3&amp;text_color=9CA3AF&amp;langs_count=8" width="49%" alt="Most used languages">
+  </picture>
 </p>
 
-## GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=parothegreat&show_icons=true&hide_border=true&bg_color=00000000&title_color=7C3AED&icon_color=22D3EE&text_color=94A3B8&ring_color=10B981" width="49%" alt="GitHub statistics" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parothegreat&layout=compact&hide_border=true&bg_color=00000000&title_color=7C3AED&text_color=94A3B8&langs_count=8" width="49%" alt="Most used languages" />
-</p>
-
-<p align="center">
-  <sub>Develop something useful in the future.</sub>
-</p>
+<p align="center"><sub>Develop something useful in the future.</sub></p>

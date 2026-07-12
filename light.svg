@@ -1,160 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-  <title id="title">Moehammad Alvaro Pirata Prayogo developer profile</title>
-  <desc id="desc">Animated terminal profile for a systems administrator and infrastructure security enthusiast.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="500" viewBox="0 0 1180 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">Alvaro Prayogo — systems and infrastructure</title>
+  <desc id="desc">An animated technical profile featuring an ASCII portrait derived from profile.jpeg.</desc>
   <defs>
-    <clipPath id="frame"><rect width="1180" height="610" rx="28"/></clipPath>
-    <clipPath id="leftPanel"><rect x="34" y="34" width="420" height="542" rx="22"/></clipPath>
-    <clipPath id="terminal"><rect x="478" y="34" width="668" height="542" rx="22"/></clipPath>
-
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#F8FAFC"/><stop offset="1" stop-color="#FFFFFF"/>
+    <clipPath id="frame"><rect width="1180" height="500" rx="18"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F7FAF9"/><stop offset=".55" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F7F5"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2563EB"><animate attributeName="stop-color" values="#2563EB;#06B6D4;#10B981;#2563EB" dur="9s" repeatCount="indefinite"/></stop>
-      <stop offset="0.5" stop-color="#06B6D4"><animate attributeName="stop-color" values="#06B6D4;#10B981;#2563EB;#06B6D4" dur="9s" repeatCount="indefinite"/></stop>
-      <stop offset="1" stop-color="#10B981"><animate attributeName="stop-color" values="#10B981;#2563EB;#06B6D4;#10B981" dur="9s" repeatCount="indefinite"/></stop>
-      <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="16s" repeatCount="indefinite"/>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#0F9F8F"/><stop offset=".55" stop-color="#059669"/><stop offset="1" stop-color="#B56B00"/>
+      <animate attributeName="x1" values="0;.25;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;.75;1" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="shimmer" x1="-1" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2563EB" stop-opacity="0"/><stop offset="0.5" stop-color="#0891B2"/><stop offset="1" stop-color="#10B981" stop-opacity="0"/>
-      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/><animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0F9F8F" stop-opacity="0"/><stop offset=".5" stop-color="#0F9F8F" stop-opacity=".16"/><stop offset="1" stop-color="#0F9F8F" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="violetGlow"><stop stop-color="#2563EB" stop-opacity=".10"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
-    <radialGradient id="cyanGlow"><stop stop-color="#06B6D4" stop-opacity=".08"/><stop offset="1" stop-color="#06B6D4" stop-opacity="0"/></radialGradient>
-    <radialGradient id="greenGlow"><stop stop-color="#10B981" stop-opacity=".06"/><stop offset="1" stop-color="#10B981" stop-opacity="0"/></radialGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0F172A" stop-opacity=".075"/><stop offset="1" stop-color="#0F172A" stop-opacity=".025"/></linearGradient>
-    <linearGradient id="reflection" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0F172A" stop-opacity=".1"/><stop offset=".35" stop-color="#0F172A" stop-opacity="0"/></linearGradient>
-    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#06B6D4" stop-opacity="0"/><stop offset=".5" stop-color="#0891B2" stop-opacity=".18"/><stop offset="1" stop-color="#06B6D4" stop-opacity="0"/></linearGradient>
-
-    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity=".14"/></filter>
-    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="noise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="7"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .035"/></feComponentTransfer></filter>
-
-    <mask id="type1"><rect width="0" height="40" fill="white"><animate attributeName="width" values="0;360;360;0;0" keyTimes="0;.12;.18;.2;1" dur="18s" repeatCount="indefinite"/></rect></mask>
-    <mask id="type2"><rect width="0" height="40" fill="white"><animate attributeName="width" values="0;360;360;0;0" keyTimes="0;.12;.18;.2;1" dur="18s" begin="3.6s" repeatCount="indefinite"/></rect></mask>
-    <mask id="type3"><rect width="0" height="40" fill="white"><animate attributeName="width" values="0;360;360;0;0" keyTimes="0;.12;.18;.2;1" dur="18s" begin="7.2s" repeatCount="indefinite"/></rect></mask>
-    <mask id="type4"><rect width="0" height="40" fill="white"><animate attributeName="width" values="0;360;360;0;0" keyTimes="0;.12;.18;.2;1" dur="18s" begin="10.8s" repeatCount="indefinite"/></rect></mask>
-    <mask id="type5"><rect width="0" height="40" fill="white"><animate attributeName="width" values="0;360;360;0;0" keyTimes="0;.12;.18;.2;1" dur="18s" begin="14.4s" repeatCount="indefinite"/></rect></mask>
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="11"/><feComponentTransfer><feFuncA type="table" tableValues="0 .025"/></feComponentTransfer></filter>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <mask id="roleMask"><rect x="0" y="0" width="0" height="28" fill="white"><animate attributeName="width" values="0;405;405;0" keyTimes="0;.28;.86;1" dur="7s" repeatCount="indefinite"/></rect></mask>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#0F172A" stroke-opacity=".025"/></pattern>
   </defs>
 
   <g clip-path="url(#frame)">
-    <rect width="1180" height="610" fill="url(#background)"/>
-    <ellipse cx="150" cy="70" rx="340" ry="260" fill="url(#violetGlow)"><animate attributeName="cx" values="150;250;150" dur="13s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="1020" cy="180" rx="320" ry="280" fill="url(#cyanGlow)"><animate attributeName="cy" values="180;270;180" dur="15s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="760" cy="620" rx="390" ry="250" fill="url(#greenGlow)"><animate attributeName="cx" values="760;670;760" dur="17s" repeatCount="indefinite"/></ellipse>
-    <rect width="1180" height="610" filter="url(#noise)" opacity=".38"/>
+    <rect width="1180" height="500" fill="url(#bg)"/>
+    <rect width="1180" height="500" fill="url(#grid)"/>
+    <rect width="1180" height="500" filter="url(#noise)" opacity=".5"/>
 
-    <g fill="#0891B2" opacity=".5" filter="url(#softGlow)">
-      <circle r="1.6"><animateMotion path="M76 522 C220 390 310 570 454 425" dur="17s" repeatCount="indefinite"/></circle>
-      <circle r="1.2"><animateMotion path="M1080 100 C920 220 1110 350 920 520" dur="21s" repeatCount="indefinite"/></circle>
-      <circle r="1.4"><animateMotion path="M520 560 C660 470 790 600 930 470" dur="19s" repeatCount="indefinite"/></circle>
-      <circle cx="55" cy="155" r="1"><animate attributeName="opacity" values=".1;.8;.1" dur="3s" repeatCount="indefinite"/></circle>
-      <circle cx="1120" cy="465" r="1"><animate attributeName="opacity" values=".8;.1;.8" dur="4s" repeatCount="indefinite"/></circle>
+    <rect x="18.5" y="18.5" width="1143" height="463" rx="11.5" fill="none" stroke="#CBD5E1"/>
+    <rect x="18.5" y="18.5" width="1143" height="463" rx="11.5" fill="none" stroke="url(#accent)" stroke-width="1.5" stroke-dasharray="160 1100" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1260" dur="10s" repeatCount="indefinite"/>
+    </rect>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <text x="40" y="48" fill="#64748B" font-size="10" letter-spacing="1.5">PAROTHEGREAT / PROFILE.SYS</text>
+      <circle cx="1118" cy="44" r="4" fill="#059669" filter="url(#glow)"><animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/></circle>
+      <text x="1104" y="48" fill="#64748B" font-size="9" text-anchor="end">ONLINE</text>
+      <line x1="40" y1="64" x2="1140" y2="64" stroke="#CBD5E1"/>
     </g>
 
-    <g filter="url(#panelShadow)">
-      <rect x="34" y="34" width="420" height="542" rx="22" fill="#F8FAFC" fill-opacity=".78" stroke="#0F172A" stroke-opacity=".09"/>
-      <rect x="478" y="34" width="668" height="542" rx="22" fill="#F8FAFC" fill-opacity=".82" stroke="#0F172A" stroke-opacity=".09"/>
-    </g>
-    <rect x="34.5" y="34.5" width="419" height="541" rx="21.5" fill="none" stroke="url(#shimmer)" stroke-opacity=".75"/>
-    <rect x="478.5" y="34.5" width="667" height="541" rx="21.5" fill="none" stroke="url(#shimmer)" stroke-opacity=".7"/>
-    <path d="M55 35 H350 L190 240 H34 V56 Q34 35 55 35Z" fill="url(#reflection)" opacity=".42"/>
-    <path d="M500 35 H850 L640 278 H478 V56 Q478 35 500 35Z" fill="url(#reflection)" opacity=".3"/>
-
-    <g clip-path="url(#leftPanel)">
-      <text x="62" y="73" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="1.4">IDENTITY://PAROTHEGREAT</text>
-      <circle cx="414" cy="68" r="4" fill="#10B981" filter="url(#softGlow)"><animate attributeName="opacity" values=".35;1;.35" dur="2.2s" repeatCount="indefinite"/></circle>
-
-      <g xml:space="preserve" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" fill="url(#accent)" filter="url(#softGlow)">
-        <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="6s" repeatCount="indefinite"/>
-        <text x="67" y="108">    ....::----====----::::........<animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".1s" fill="freeze"/></text>
-        <text x="67" y="121">    ...:::--+*####*+--:::::.......<animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".2s" fill="freeze"/></text>
-        <text x="67" y="134">       ..:-%*=-..:-*#.:......  ...<animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".3s" fill="freeze"/></text>
-        <text x="67" y="147">          -%--.  . :*...          <animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".4s" fill="freeze"/></text>
-        <text x="67" y="160">        ..:-..:::.  ::......      <animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".5s" fill="freeze"/></text>
-        <text x="67" y="173">         .::: ....  .-::..::..    <animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".6s" fill="freeze"/></text>
-        <text x="67" y="186">        . .:-----::-::-:::::::..  <animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".7s" fill="freeze"/></text>
-        <text x="67" y="199">        .:-+#:... =*=--::-::::.:  <animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".8s" fill="freeze"/></text>
-        <text x="67" y="212">    :=+#%@@#=#%+*#@-%@%##*+-::....<animate attributeName="opacity" from="0" to="1" dur=".25s" begin=".9s" fill="freeze"/></text>
-        <text x="67" y="225"> ..#@@@@@@@@# =@@@. @@@@@@@%=-::..<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1s" fill="freeze"/></text>
-        <text x="67" y="238">:.#@@@@@@@@@@@ :@+ %*+*=%@@@@*---:<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.1s" fill="freeze"/></text>
-        <text x="67" y="251">:-@@@@@@@@@@@@@=-:#@#*#+@@@@@%=--:<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.2s" fill="freeze"/></text>
-        <text x="67" y="264">:+@@@@#*@@@@@@@@ -@@@@@@@@@@@@#-=-<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.3s" fill="freeze"/></text>
-        <text x="67" y="277">-*%*==--.*@@@@@@+%@@@@@@@@*+=-==-=<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.4s" fill="freeze"/></text>
-        <text x="67" y="290">==     ...*@@@@#=*+=:...:=:    .==<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.5s" fill="freeze"/></text>
-        <text x="67" y="303">+=. ..:..  ....       .. .:.    ==<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.6s" fill="freeze"/></text>
-        <text x="67" y="316">++-.                ....        =+<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.7s" fill="freeze"/></text>
-        <text x="67" y="329">++=:         .--::.    .....::.-++<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.8s" fill="freeze"/></text>
-        <text x="67" y="342">+*+-=+**###%%@@@=:-*%%%%%@#+****++<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="1.9s" fill="freeze"/></text>
-        <text x="67" y="355">**+=#@@@@@@@@@@@@#@@@@@@@@%***+*+*<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="2s" fill="freeze"/></text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <text x="54" y="91" fill="#64748B" font-size="9" letter-spacing="1.2">PORTRAIT / LUMA MAP</text>
+      <text x="384" y="91" fill="#475569" font-size="9" text-anchor="end">profile.jpeg</text>
+      <g xml:space="preserve" font-size="12.5" font-weight="700" fill="url(#accent)" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="5.5s" repeatCount="indefinite"/>
+        <text x="58" y="118">    ....::----====----::::........</text>
+        <text x="58" y="134">    ...:::--+*####*+--:::::.......</text>
+        <text x="58" y="150">       ..:-%*=-..:-*#.:......  ...</text>
+        <text x="58" y="166">          -%--.  . :*...          </text>
+        <text x="58" y="182">        ..:-..:::.  ::......      </text>
+        <text x="58" y="198">         .::: ....  .-::..::..    </text>
+        <text x="58" y="214">        . .:-----::-::-:::::::..  </text>
+        <text x="58" y="230">        .:-+#:... =*=--::-::::.:  </text>
+        <text x="58" y="246">    :=+#%@@#=#%+*#@-%@%##*+-::....</text>
+        <text x="58" y="262"> ..#@@@@@@@@# =@@@. @@@@@@@%=-::..</text>
+        <text x="58" y="278">:.#@@@@@@@@@@@ :@+ %*+*=%@@@@*---:</text>
+        <text x="58" y="294">:-@@@@@@@@@@@@@=-:#@#*#+@@@@@%=--:</text>
+        <text x="58" y="310">:+@@@@#*@@@@@@@@ -@@@@@@@@@@@@#-=-</text>
+        <text x="58" y="326">-*%*==--.*@@@@@@+%@@@@@@@@*+=-==-=</text>
+        <text x="58" y="342">==     ...*@@@@#=*+=:...:=:    .==</text>
+        <text x="58" y="358">+=. ..:..  ....       .. .:.    ==</text>
       </g>
-      <rect x="50" y="80" width="390" height="32" fill="url(#scan)" opacity=".85"><animate attributeName="y" values="80;520;80" dur="5.5s" repeatCount="indefinite"/></rect>
-      <rect x="78" y="363" width="270" height="1" fill="url(#accent)" opacity=".55"/>
-      <text x="78" y="396" fill="#0F172A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700">PAROTHEGREAT</text>
-      <text x="78" y="422" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">SYSTEMS • NETWORKS • SECURITY</text>
+      <rect x="48" y="96" width="366" height="24" fill="url(#scan)"><animate attributeName="y" values="96;348;96" dur="5s" repeatCount="indefinite"/></rect>
+      <line x1="54" y1="378" x2="398" y2="378" stroke="#CBD5E1"/>
+      <text x="54" y="400" fill="#475569" font-size="10">SOURCE  768×863 / GRAYSCALE / 32 COL</text>
+    </g>
+
+    <line x1="438" y1="84" x2="438" y2="421" stroke="#CBD5E1"/>
+    <g font-family="ui-sans-serif, system-ui, sans-serif">
+      <text x="476" y="104" fill="#B56B00" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="1.6">SYSTEMS / INFRASTRUCTURE / SECURITY</text>
+      <text x="474" y="174" fill="#0F172A" font-size="55" font-weight="800" letter-spacing="0">ALVARO</text>
+      <text x="474" y="230" fill="#0F172A" font-size="55" font-weight="300" letter-spacing="0">PRAYOGO</text>
+      <rect x="477" y="247" width="44" height="3" fill="#0F9F8F"/>
+      <g transform="translate(476 277)" mask="url(#roleMask)">
+        <text y="0" fill="#0F9F8F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">JUNIOR SYSTEMS ADMINISTRATOR</text>
+      </g>
+      <rect x="895" y="259" width="8" height="21" fill="#B56B00"><animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/></rect>
+
       <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
-        <text x="78" y="474" fill="#06B6D4">$ status</text>
-        <text x="78" y="498" fill="#64748B">building useful systems</text>
-        <rect x="270" y="486" width="7" height="14" fill="#10B981"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+        <text x="476" y="322" fill="#64748B">LOCATION</text><text x="565" y="322" fill="#334155">CIKARANG, INDONESIA</text>
+        <text x="820" y="322" fill="#64748B">STATUS</text><text x="890" y="322" fill="#059669">OPEN TO WORK</text>
+        <text x="476" y="349" fill="#64748B">FOCUS</text><text x="565" y="349" fill="#334155">LINUX / NETWORKS / MONITORING</text>
+        <text x="820" y="349" fill="#64748B">ORG</text><text x="890" y="349" fill="#334155">TEAMITMIVHS</text>
       </g>
+
+      <line x1="476" y1="376" x2="1124" y2="376" stroke="#CBD5E1"/>
+      <text x="476" y="400" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" letter-spacing="1.3">WORKING SET</text>
+      <text x="476" y="421" fill="#334155" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">LINUX  ·  GO  ·  DOCKER  ·  NGINX  ·  POSTGRES  ·  GRAFANA</text>
     </g>
 
-    <g clip-path="url(#terminal)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
-      <rect x="478" y="34" width="668" height="54" fill="#0F172A" fill-opacity=".035"/>
-      <circle cx="506" cy="61" r="5" fill="#FB7185"/><circle cx="524" cy="61" r="5" fill="#FBBF24"/><circle cx="542" cy="61" r="5" fill="#34D399"/>
-      <text x="812" y="65" fill="#64748B" font-size="11" text-anchor="middle">alvaro@infrastructure:~</text>
-
-      <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur=".2s"/><animate attributeName="opacity" from="0" to="1" dur=".6s" begin=".2s" fill="freeze"/>
-        <text x="516" y="130" fill="#64748B" font-size="15">Hi</text>
-        <text x="542" y="130" fill="#0F172A" font-size="19">👋</text>
-        <text x="516" y="173" fill="#0F172A" font-size="27" font-weight="700">I'm</text>
-        <text x="572" y="173" fill="url(#accent)" font-size="27" font-weight="700">Moehammad Alvaro</text>
-      </g>
-
-      <g transform="translate(516 198)" font-size="16" font-weight="600">
-        <text fill="#06B6D4" mask="url(#type1)">Junior Systems Administrator</text>
-        <text fill="#06B6D4" mask="url(#type2)">Infrastructure Security Enthusiast</text>
-        <text fill="#06B6D4" mask="url(#type3)">Backend &amp; Automation Developer</text>
-        <text fill="#06B6D4" mask="url(#type4)">Open Source Contributor</text>
-        <text fill="#06B6D4" mask="url(#type5)">Linux &amp; Network Explorer</text>
-        <rect x="350" y="-17" width="8" height="21" fill="#0891B2"><animate attributeName="opacity" values="1;0;1" dur=".85s" repeatCount="indefinite"/></rect>
-      </g>
-
-      <g font-size="11.5">
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="1.3s"/><animate attributeName="opacity" from="0" to="1" dur=".45s" begin="1.3s" fill="freeze"/><text x="516" y="249" fill="#2563EB">●</text><text x="537" y="249" fill="#64748B">location</text><text x="614" y="249" fill="#334155">Cikarang Selatan, Indonesia</text></g>
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="1.7s"/><animate attributeName="opacity" from="0" to="1" dur=".45s" begin="1.7s" fill="freeze"/><text x="516" y="274" fill="#06B6D4">●</text><text x="537" y="274" fill="#64748B">education</text><text x="614" y="274" fill="#334155">Industrial Electronic Engineering</text></g>
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="2.1s"/><animate attributeName="opacity" from="0" to="1" dur=".45s" begin="2.1s" fill="freeze"/><text x="516" y="299" fill="#10B981">●</text><text x="537" y="299" fill="#64748B">focus</text><text x="614" y="299" fill="#334155">Linux · Networking · Monitoring</text></g>
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="2.5s"/><animate attributeName="opacity" from="0" to="1" dur=".45s" begin="2.5s" fill="freeze"/><text x="516" y="324" fill="#2563EB">●</text><text x="537" y="324" fill="#64748B">portfolio</text><text x="614" y="324" fill="#334155">parothegreat.site</text></g>
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="2.9s"/><animate attributeName="opacity" from="0" to="1" dur=".45s" begin="2.9s" fill="freeze"/><text x="516" y="349" fill="#06B6D4">●</text><text x="537" y="349" fill="#64748B">email</text><text x="614" y="349" fill="#334155">alvaroprayogo38@gmail.com</text></g>
-      </g>
-
-      <text x="516" y="393" fill="#64748B" font-size="10.5" letter-spacing="1.4">TOOLBOX</text>
-      <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#1E293B" text-anchor="middle">
-        <g opacity="1"><set attributeName="opacity" to="0" begin="0s" dur="3.3s"/><animate attributeName="opacity" from="0" to="1" dur=".5s" begin="3.3s" fill="freeze"/>
-          <g id="linux"><rect x="516" y="410" width="67" height="29" rx="9" fill="url(#glass)" stroke="#2563EB" stroke-opacity=".55"><animate attributeName="stroke-opacity" values=".4;.9;.4" dur="3.3s" repeatCount="indefinite"/></rect><text x="549.5" y="429">Linux</text></g>
-          <g id="go"><rect x="591" y="410" width="50" height="29" rx="9" fill="url(#glass)" stroke="#06B6D4" stroke-opacity=".55"/><text x="616" y="429">Go</text><animate attributeName="opacity" values=".8;1;.8" dur="2.8s" repeatCount="indefinite"/></g>
-          <g><rect x="649" y="410" width="78" height="29" rx="9" fill="url(#glass)" stroke="#10B981" stroke-opacity=".55"/><text x="688" y="429">Docker</text></g>
-          <g><rect x="735" y="410" width="78" height="29" rx="9" fill="url(#glass)" stroke="#2563EB" stroke-opacity=".55"/><text x="774" y="429">Nginx</text></g>
-          <g><rect x="821" y="410" width="92" height="29" rx="9" fill="url(#glass)" stroke="#06B6D4" stroke-opacity=".55"/><text x="867" y="429">TypeScript</text></g>
-          <g><rect x="921" y="410" width="75" height="29" rx="9" fill="url(#glass)" stroke="#10B981" stroke-opacity=".55"/><text x="958.5" y="429">Python</text></g>
-          <g><rect x="1004" y="410" width="75" height="29" rx="9" fill="url(#glass)" stroke="#2563EB" stroke-opacity=".55"/><text x="1041.5" y="429">Git</text></g>
-          <g><rect x="516" y="448" width="88" height="29" rx="9" fill="url(#glass)" stroke="#06B6D4" stroke-opacity=".55"/><text x="560" y="467">Postgres</text></g>
-          <g><rect x="612" y="448" width="98" height="29" rx="9" fill="url(#glass)" stroke="#10B981" stroke-opacity=".55"/><text x="661" y="467">Prometheus</text></g>
-          <g><rect x="718" y="448" width="82" height="29" rx="9" fill="url(#glass)" stroke="#2563EB" stroke-opacity=".55"/><text x="759" y="467">Grafana</text></g>
-          <g><rect x="808" y="448" width="78" height="29" rx="9" fill="url(#glass)" stroke="#06B6D4" stroke-opacity=".55"/><text x="847" y="467">Bash</text></g>
-          <g><rect x="894" y="448" width="104" height="29" rx="9" fill="url(#glass)" stroke="#10B981" stroke-opacity=".55"/><text x="946" y="467">Cloudflare</text></g>
-        </g>
-      </g>
-
-      <line x1="516" y1="505" x2="1108" y2="505" stroke="#0F172A" stroke-opacity=".08"/>
-      <g opacity="1" font-family="ui-sans-serif, system-ui, sans-serif"><set attributeName="opacity" to="0" begin="0s" dur="3.8s"/><animate attributeName="opacity" from="0" to="1" dur=".5s" begin="3.8s" fill="freeze"/>
-        <g transform="translate(516 526)"><circle cx="13" cy="13" r="13" fill="#0F172A" fill-opacity=".055" stroke="#0F172A" stroke-opacity=".12"/><text x="13" y="17" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">GH</text><text x="35" y="17" fill="#64748B" font-size="11">GitHub</text></g>
-        <g transform="translate(650 526)"><circle cx="13" cy="13" r="13" fill="#0F172A" fill-opacity=".055" stroke="#06B6D4" stroke-opacity=".35"/><text x="13" y="17" fill="#0891B2" font-size="10" font-weight="700" text-anchor="middle">in</text><text x="35" y="17" fill="#64748B" font-size="11">LinkedIn</text></g>
-        <g transform="translate(798 526)"><circle cx="13" cy="13" r="13" fill="#0F172A" fill-opacity=".055" stroke="#10B981" stroke-opacity=".35"/><text x="13" y="17" fill="#059669" font-size="10" font-weight="700" text-anchor="middle">//</text><text x="35" y="17" fill="#64748B" font-size="11">Portfolio</text></g>
-        <g transform="translate(948 526)"><circle cx="13" cy="13" r="13" fill="#0F172A" fill-opacity=".055" stroke="#2563EB" stroke-opacity=".35"/><text x="13" y="17" fill="#2563EB" font-size="11" font-weight="700" text-anchor="middle">@</text><text x="35" y="17" fill="#64748B" font-size="11">Email</text></g>
-      </g>
+    <rect x="18" y="441" width="1144" height="41" fill="#0F172A" fill-opacity=".025"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">
+      <text x="40" y="466" fill="#0F9F8F">parothegreat.site</text>
+      <text x="280" y="466" fill="#475569">github.com/parothegreat</text>
+      <text x="570" y="466" fill="#475569">Cikarang Selatan / UTC+7</text>
+      <text x="1140" y="466" fill="#B56B00" text-anchor="end">BUILD USEFUL THINGS.</text>
     </g>
-
-    <rect y="-28" width="1180" height="42" fill="url(#scan)" opacity=".25"><animate attributeName="y" values="-28;610" dur="8s" repeatCount="indefinite"/></rect>
   </g>
 </svg>
