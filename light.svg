@@ -8,11 +8,26 @@
       <stop offset=".62" stop-color="#059669"><animate attributeName="stop-color" values="#059669;#0F766E;#B56B00;#059669" dur="10s" repeatCount="indefinite"/></stop>
       <stop offset="1" stop-color="#B56B00"><animate attributeName="stop-color" values="#B56B00;#059669;#0284C7;#B56B00" dur="10s" repeatCount="indefinite"/></stop>
     </linearGradient>
-    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0F766E" stop-opacity="0"/><stop offset=".5" stop-color="#0891B2" stop-opacity=".45"/><stop offset="1" stop-color="#0F766E" stop-opacity="0"/></linearGradient>
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#0891B2" opacity=".035"/></pattern>
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity=".12"/></filter>
     <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="9"/><feComponentTransfer><feFuncA type="table" tableValues="0 .02"/></feComponentTransfer></filter>
+    <clipPath id="type0"><rect x="518" y="71" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="0.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="0.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type1"><rect x="518" y="100" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="0.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="0.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type2"><rect x="518" y="127" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="1.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="1.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type3"><rect x="518" y="154" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="1.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="1.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type4"><rect x="518" y="181" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="2.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="2.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type5"><rect x="518" y="208" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="2.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="2.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type6"><rect x="518" y="235" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="3.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="3.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type7"><rect x="518" y="276" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="3.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="3.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type8"><rect x="518" y="306" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="4.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="4.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type9"><rect x="518" y="333" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="4.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="4.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type10"><rect x="518" y="360" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="5.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="5.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type11"><rect x="518" y="387" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="5.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="5.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type12"><rect x="518" y="414" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="6.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="6.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type13"><rect x="518" y="455" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="6.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="6.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type14"><rect x="518" y="485" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="7.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="7.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type15"><rect x="518" y="512" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="7.75s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="7.75s" fill="freeze" calcMode="discrete"/></rect></clipPath>
+    <clipPath id="type16"><rect x="518" y="539" width="660" height="26"><set attributeName="width" to="0" begin="0s" dur="8.25s"/><animate attributeName="width" values="0;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;320;330;340;350;360;370;380;390;400;410;420;430;440;450;460;470;480;490;500;510;520;530;540;550;560;570;580;590;600;610;620;630;640;650;660" dur=".72s" begin="8.25s" fill="freeze" calcMode="discrete"/></rect></clipPath>
     <style>
       .mono { font-family: 'Courier New', Consolas, monospace; }
       .key { fill:#0F766E; font-weight:700; }
@@ -24,7 +39,6 @@
   </defs>
 
   <rect width="1180" height="610" rx="18" fill="url(#bg)"/>
-  <rect width="1180" height="610" rx="18" fill="url(#scanlines)"/>
   <rect width="1180" height="610" rx="18" filter="url(#noise)" opacity=".42"/>
 
   <g class="mono">
@@ -44,58 +58,116 @@
     <text x="30" y="61" fill="#0284C7" opacity=".72" font-size="11" letter-spacing="2">VISUAL.MAP</text>
     <text x="524" y="61" fill="#0284C7" opacity=".72" font-size="11" letter-spacing="2">SYSTEM.INFO</text>
 
-    <g xml:space="preserve" font-size="12" font-weight="700" fill="url(#accent)" filter="url(#glow)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="6s" repeatCount="indefinite"/>
-      <text x="47" y="105">    ....::----====----::::........</text>
-      <text x="47" y="123">    ...:::--+*####*+--:::::.......</text>
-      <text x="47" y="141">       ..:-%*=-..:-*#.:......  ...</text>
-      <text x="47" y="159">          -%--.  . :*...          </text>
-      <text x="47" y="177">        ..:-..:::.  ::......      </text>
-      <text x="47" y="195">         .::: ....  .-::..::..    </text>
-      <text x="47" y="213">        . .:-----::-::-:::::::..  </text>
-      <text x="47" y="231">        .:-+#:... =*=--::-::::.:  </text>
-      <text x="47" y="249">    :=+#%@@#=#%+*#@-%@%##*+-::....</text>
-      <text x="47" y="267"> ..#@@@@@@@@# =@@@. @@@@@@@%=-::..</text>
-      <text x="47" y="285">:.#@@@@@@@@@@@ :@+ %*+*=%@@@@*---:</text>
-      <text x="47" y="303">:-@@@@@@@@@@@@@=-:#@#*#+@@@@@%=--:</text>
-      <text x="47" y="321">:+@@@@#*@@@@@@@@ -@@@@@@@@@@@@#-=-</text>
-      <text x="47" y="339">-*%*==--.*@@@@@@+%@@@@@@@@*+=-==-=</text>
-      <text x="47" y="357">==     ...*@@@@#=*+=:...:=:    .==</text>
-      <text x="47" y="375">+=. ..:..  ....       .. .:.    ==</text>
-      <text x="47" y="393">++-.                ....        =+</text>
-      <text x="47" y="411">++=:         .--::.    .....::.-++</text>
-      <text x="47" y="429">+*+-=+**###%%@@@=:-*%%%%%@#+****++</text>
-      <text x="47" y="447">**+=#@@@@@@@@@@@@#@@@@@@@@%***+*+*</text>
+    <g xml:space="preserve" font-size="5.8" font-weight="700" fill="url(#accent)" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="6s" repeatCount="indefinite"/>
+      <text class="ascii">
+        <tspan x="30" y="72"></tspan>
+        <tspan x="30" y="78">                        @@@@@@@%%%@@@@@@@@</tspan>
+        <tspan x="30" y="84">                      @@@@%#*+++===+++*%@@@</tspan>
+        <tspan x="30" y="90">                     @@@#++++===========+%@@</tspan>
+        <tspan x="30" y="96">                     @@%#++**+===========#%@</tspan>
+        <tspan x="30" y="102">                     @@#*#*++===--=====+++%%</tspan>
+        <tspan x="30" y="108">                     @%##+++*+==++=++====+*%</tspan>
+        <tspan x="30" y="114">                     @%*+++++==++++++==+=+#%</tspan>
+        <tspan x="30" y="120">                    *+*++++===+*==++=======+</tspan>
+        <tspan x="30" y="126">                    +=+++======++++====--==+*</tspan>
+        <tspan x="30" y="132">                    +=+++======+=======-====</tspan>
+        <tspan x="30" y="138">                     +++++==+**++++++=======</tspan>
+        <tspan x="30" y="144">                      =+++=================</tspan>
+        <tspan x="30" y="150">                        *++=============++</tspan>
+        <tspan x="30" y="156">                        ****++++++===++++</tspan>
+        <tspan x="30" y="162">                        +++****##*****+++</tspan>
+        <tspan x="30" y="168">                       @#+++++*+++++++++#</tspan>
+        <tspan x="30" y="174">                       @@+====+++======#@</tspan>
+        <tspan x="30" y="180">                    @%#%@@*===========*@%+@@</tspan>
+        <tspan x="30" y="186">                 @@@@@**%@@%+=======+#@@%+%@@@@@</tspan>
+        <tspan x="30" y="192">            @@@@@@@@@@@**#@@@@%***%@@@@@*+%@@@@@@@@@@</tspan>
+        <tspan x="30" y="198">       @@@@@@@@@@@@@@@@%***%@@@@@@@@@@@%*+%@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="204">     @@@@@@@@@@@@@@@@@@@%::-@@@@@@@@@@@=:=@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="210">    @@@@@@@@@@@@@@@@@@@@@%-::%@@@@@@@@#.:#@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="216">   @@@@@@@@@@@@@@@@@@@@@@@%=:-#@@@@@@%::=@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="222">  @@@@@@@@@@@@@@@@@@@@@@@@@@-::%@@@@@+::#@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="228">  @@@@@@@@@@@@@@@@@@@@@@@@@@@=::%@@@#::=%@@%##%%*%@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="234">  @@@@@@@@@@@@@@@@@@@@@@@@@@@%*++%@@*==#@@*+=+%%===%@@@@@@@@@@@</tspan>
+        <tspan x="30" y="240"> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+=*%%++*@@@#*==*%+++*@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="246"> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%==%*=+@@@@@@@#%@##%@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="252"> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#==++#@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="258"> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%===+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="264">@@@@@@@@@@%+*@@@@@@@@@@@@@@@@@@@%-::#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="270">@@@@@@@@@@@#===#@@@@@@@@@@@@@@@@%-:-%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="276">@@@@@@@@@@@@@%+-=#@@@@@@@@@@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="282">@@@@@#==++==+#@#==%@@@@@@@@@@@@@@###%@@@@@@@@@@@@@@@@@@@@@#+==--=+%%</tspan>
+        <tspan x="30" y="288">@%#+=======---=++=+@@@@@@@@@@@@@@###@@@@@@@@@@@@@%%@@@%+===--------=</tspan>
+        <tspan x="30" y="294">*+====-======+====+*@@@@@@@@@@@@@#%%@@@@@%#*+++++=+++*#+=======----=</tspan>
+        <tspan x="30" y="300">+=====+++==========+*@@@@@@@@@@@%++#%*+++============++#+========--==</tspan>
+        <tspan x="30" y="306"> +======+======+===++*@@@@@@%##*++====================+*+============</tspan>
+        <tspan x="30" y="312"> +========+**++++++================================-==+**+++=========</tspan>
+        <tspan x="30" y="318"> ++=======+++=====================================++++===============</tspan>
+        <tspan x="30" y="324">  +==============================---========+***+++==========------===</tspan>
+        <tspan x="30" y="330">  ++==================-==-==---===========+++==================-----==</tspan>
+        <tspan x="30" y="336">  ++=================--================+======================------==</tspan>
+        <tspan x="30" y="342">   ++=========================================================-----==</tspan>
+        <tspan x="30" y="348">   +++===============================================================</tspan>
+        <tspan x="30" y="354">    ++========================+++======================+++++++++++++</tspan>
+        <tspan x="30" y="360">    +++=========++=====+++*#@@@@%%%%##**++++++++++++++***+*****</tspan>
+        <tspan x="30" y="366">     ++++++++*****##%%%@@@@@@@@@%+=+++++*#%%@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="372">       @@@@@@@@@@@@@@@@@@@@@@@@@@%=====+#@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="378">       @@@@@@@@@@@@@@@@@@@@@@@@@@@#=+#%@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="384">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="390">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="396">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="402">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="408">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="414">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="420">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</tspan>
+        <tspan x="30" y="426">      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+</tspan>
+        <tspan x="30" y="432">       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#=-::</tspan>
+        <tspan x="30" y="438">       =#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*=--:::-</tspan>
+        <tspan x="30" y="444">      ---=#%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%#*=----------:</tspan>
+        <tspan x="30" y="450">      ----------====++++++++*******###*+==-----------::::--:</tspan>
+        <tspan x="30" y="456">     :------------------------------------------------:::---:</tspan>
+        <tspan x="30" y="462">     -------------------------------------------------:::::--.</tspan>
+        <tspan x="30" y="468">     -------------------------------------------------:::----</tspan>
+        <tspan x="30" y="474">     -------------------------------------------------:::---:</tspan>
+        <tspan x="30" y="480">     -=----------------------------==-----------------:::----</tspan>
+        <tspan x="30" y="486">      =---------------------------===------------------------</tspan>
+        <tspan x="30" y="492">      ---------------------------=========--=---------------:</tspan>
+        <tspan x="30" y="498">      --------------------------==========--==--------------:</tspan>
+        <tspan x="30" y="504">      :-------------------------===*=======-==--------------:</tspan>
+      </text>
     </g>
-    <rect x="30" y="72" width="455" height="38" fill="url(#scan)" opacity=".65"><animate attributeName="y" values="72;456;72" dur="4.8s" repeatCount="indefinite"/></rect>
-    <line x1="31" y1="474" x2="485" y2="474" stroke="#CBD5E1"/>
-    <text x="31" y="495" fill="#64748B" font-size="10">SOURCE: profile.jpeg / 768×863 / GRAYSCALE</text>
-    <text x="31" y="516" fill="#0F766E" font-size="10">SCAN: COMPLETE</text>
+    <line x1="31" y1="520" x2="485" y2="520" stroke="#CBD5E1"/>
+    <text x="31" y="539" fill="#64748B" font-size="10">SOURCE: profile.jpeg / GENERATED PORTRAIT</text>
+    <text x="31" y="558" fill="#0F766E" font-size="10">PORTRAIT: ASCII_TO_SVG.PY</text>
 
     <g font-size="14.5">
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin=".3s" fill="freeze"/><text x="524" y="91" class="section">parothegreat@fedora</text><text x="720" y="91" class="dots"> ───────────────────────────</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin=".5s" fill="freeze"/><text x="524" y="120" class="key">Subject</text><text x="595" y="120" class="dots"> ............ </text><text x="710" y="120" class="value">Moehammad Alvaro Prayogo</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin=".7s" fill="freeze"/><text x="524" y="147" class="key">Role</text><text x="566" y="147" class="dots"> ............... </text><text x="710" y="147" class="value">Junior Systems Administrator</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin=".9s" fill="freeze"/><text x="524" y="174" class="key">Origin</text><text x="584" y="174" class="dots"> ............. </text><text x="710" y="174" class="value">Cikarang Selatan, Indonesia</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="1.1s" fill="freeze"/><text x="524" y="201" class="key">Education</text><text x="612" y="201" class="dots"> ......... </text><text x="710" y="201" class="value">Industrial Electronic Eng.</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="1.3s" fill="freeze"/><text x="524" y="228" class="key">Status</text><text x="584" y="228" class="dots"> ............. </text><text x="710" y="228" fill="#059669">Building · Learning · Shipping</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="1.5s" fill="freeze"/><text x="524" y="255" class="key">Toolchain</text><text x="604" y="255" class="dots"> ......... </text><text x="710" y="255" class="value">Fedora, Git, Docker, Neovim</text></g>
+      <rect x="518" y="70" width="627" height="30" rx="5" fill="#B56B00" opacity=".07"/>
+      <rect x="518" y="101" width="627" height="27" rx="5" fill="#0F766E" opacity=".045"/>
+      <rect x="518" y="209" width="627" height="27" rx="5" fill="#059669" opacity=".1"><animate attributeName="opacity" values=".06;.15;.06" dur="3s" repeatCount="indefinite"/></rect>
+      <rect x="518" y="486" width="627" height="82" rx="7" fill="#0F766E" opacity=".035"/>
 
-      <text x="524" y="296" class="section">- Core Systems ───────────────────────────────</text>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="1.8s" fill="freeze"/><text x="524" y="326" class="key">Core.System</text><text x="628" y="326" class="dots"> ...... </text><text x="710" y="326" class="value">Linux, systemd, Nginx, Docker</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="2s" fill="freeze"/><text x="524" y="353" class="key">Core.Network</text><text x="636" y="353" class="dots"> ..... </text><text x="710" y="353" class="value">TCP/IP, DNS, VLAN, MikroTik</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="2.2s" fill="freeze"/><text x="524" y="380" class="key">Core.Backend</text><text x="636" y="380" class="dots"> ..... </text><text x="710" y="380" class="value">Go, TypeScript, Python, REST</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="2.4s" fill="freeze"/><text x="524" y="407" class="key">Core.Data</text><text x="611" y="407" class="dots"> ........ </text><text x="710" y="407" class="value">MariaDB, PostgreSQL, Redis</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="2.6s" fill="freeze"/><text x="524" y="434" class="key">Core.Observe</text><text x="636" y="434" class="dots"> ..... </text><text x="710" y="434" class="value">Prometheus, Grafana, HTTP checks</text></g>
+      <g clip-path="url(#type0)"><text x="524" y="91" class="section" font-size="16">parothegreat@fedora</text><text x="720" y="91" class="dots"> ───────────────────────────</text></g>
+      <g clip-path="url(#type1)"><text x="524" y="120" class="key">Subject</text><text x="595" y="120" class="dots"> ............ </text><text x="710" y="120" class="value" font-weight="700">Moehammad Alvaro Prayogo</text></g>
+      <g clip-path="url(#type2)"><text x="524" y="147" class="key">Role</text><text x="566" y="147" class="dots"> ............... </text><text x="710" y="147" class="value">Junior Systems Administrator</text></g>
+      <g clip-path="url(#type3)"><text x="524" y="174" class="key">Origin</text><text x="584" y="174" class="dots"> ............. </text><text x="710" y="174" class="value">Cikarang Selatan, Indonesia</text></g>
+      <g clip-path="url(#type4)"><text x="524" y="201" class="key">Education</text><text x="612" y="201" class="dots"> ......... </text><text x="710" y="201" class="value">Industrial Electronic Eng.</text></g>
+      <g clip-path="url(#type5)"><text x="524" y="228" class="key">Status</text><text x="584" y="228" class="dots"> ............. </text><text x="710" y="228" fill="#059669" font-weight="700">Building · Learning · Shipping</text></g>
+      <g clip-path="url(#type6)"><text x="524" y="255" class="key">Toolchain</text><text x="604" y="255" class="dots"> ......... </text><text x="710" y="255" class="value">Fedora, Git, Docker, Neovim</text></g>
 
-      <text x="524" y="475" class="section">- Contact ────────────────────────────────────</text>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="2.9s" fill="freeze"/><text x="524" y="505" class="key">Grid.Mail</text><text x="605" y="505" class="dots"> ......... </text><text x="710" y="505" class="value">alvaroprayogo38@gmail.com</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="3.1s" fill="freeze"/><text x="524" y="532" class="key">Grid.Web</text><text x="598" y="532" class="dots"> .......... </text><text x="710" y="532" class="value">parothegreat.site</text></g>
-      <g><animate attributeName="opacity" values=".25;1" dur=".4s" begin="3.3s" fill="freeze"/><text x="524" y="559" class="key">Grid.GitHub</text><text x="620" y="559" class="dots"> ...... </text><text x="710" y="559" class="value">github.com/parothegreat</text></g>
-      <rect x="930" y="546" width="8" height="17" fill="#B56B00"><animate attributeName="opacity" values="1;0;1" dur=".9s" begin="3.3s" repeatCount="indefinite"/></rect>
+      <g clip-path="url(#type7)"><text x="524" y="296" class="section">- Core Systems ───────────────────────────────</text></g>
+      <g clip-path="url(#type8)"><text x="524" y="326" class="key">Core.System</text><text x="628" y="326" class="dots"> ...... </text><text x="710" y="326" class="value">Linux, systemd, Nginx, Docker</text></g>
+      <g clip-path="url(#type9)"><text x="524" y="353" class="key">Core.Network</text><text x="636" y="353" class="dots"> ..... </text><text x="710" y="353" class="value">TCP/IP, DNS, VLAN, MikroTik</text></g>
+      <g clip-path="url(#type10)"><text x="524" y="380" class="key">Core.Backend</text><text x="636" y="380" class="dots"> ..... </text><text x="710" y="380" class="value">Go, TypeScript, Python, REST</text></g>
+      <g clip-path="url(#type11)"><text x="524" y="407" class="key">Core.Data</text><text x="611" y="407" class="dots"> ........ </text><text x="710" y="407" class="value">MariaDB, PostgreSQL, Redis</text></g>
+      <g clip-path="url(#type12)"><text x="524" y="434" class="key">Core.Observe</text><text x="636" y="434" class="dots"> ..... </text><text x="710" y="434" class="value">Prometheus, Grafana, HTTP checks</text></g>
+
+      <g clip-path="url(#type13)"><text x="524" y="475" class="section">- Contact ────────────────────────────────────</text></g>
+      <g clip-path="url(#type14)"><text x="524" y="505" class="key">Grid.Mail</text><text x="605" y="505" class="dots"> ......... </text><text x="710" y="505" class="value">alvaroprayogo38@gmail.com</text></g>
+      <g clip-path="url(#type15)"><text x="524" y="532" class="key">Grid.Web</text><text x="598" y="532" class="dots"> .......... </text><text x="710" y="532" fill="#0F766E" font-weight="700">parothegreat.site</text></g>
+      <g clip-path="url(#type16)"><text x="524" y="559" class="key">Grid.GitHub</text><text x="620" y="559" class="dots"> ...... </text><text x="710" y="559" class="value">github.com/parothegreat</text></g>
+      <rect x="930" y="546" width="8" height="17" fill="#B56B00" opacity="0"><animate attributeName="opacity" values="0;1;0;1" dur="1.1s" begin="8.75s" repeatCount="indefinite"/></rect>
     </g>
   </g>
 
-  <rect y="-60" width="1180" height="60" fill="url(#scan)" opacity=".45"><animateTransform attributeName="transform" type="translate" from="0 -60" to="0 670" dur="4.4s" repeatCount="indefinite"/></rect>
   <rect x="3" y="3" width="1174" height="604" rx="16" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity=".7"><animate attributeName="opacity" values=".42;.85;.42" dur="3.4s" repeatCount="indefinite"/></rect>
 </svg>
