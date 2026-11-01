@@ -1,87 +1,99 @@
 <a href="https://parothegreat.site">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <img src="assets/banner-light.svg" width="100%" alt="Alvaro Prayogo, DevOps Engineer: Linux, containers and networks">
+    <img src="assets/banner-light.svg" width="100%" alt="Alvaro Prayogo. Infrastructure, DevOps and security. Head of IT Team at SMK Mitra Industri MM2100, CTO at Klaro.">
   </picture>
 </a>
 
 <p align="center">
-  <a href="https://parothegreat.site"><b>parothegreat.site</b></a>
+  <a href="https://parothegreat.site">Portfolio</a>
   &nbsp;·&nbsp;
   <a href="https://linkedin.com/in/moehammad-alvaro-pirata-prayogo-842a8834a">LinkedIn</a>
   &nbsp;·&nbsp;
-  <a href="mailto:alvaroprayogo38@gmail.com">alvaroprayogo38@gmail.com</a>
+  <a href="mailto:alvaroprayogo38@gmail.com">Email</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/teamitmivhs">Team ITMIVHS</a>
 </p>
 
 <br>
 
-I'm a DevOps engineer based in Cikarang, Indonesia, trained in **industrial electronic engineering**.
-I started with circuit boards and microcontrollers and worked my way up the stack to Linux servers,
-containers and networks, the layer that keeps services running and observable.
+I'm Moehammad Alvaro Pirata Prayogo, an industrial electronics student at SMK Mitra Industri MM2100
+in Cikarang, Indonesia. I lead my school's IT team and serve as CTO of Klaro. Most of my work sits underneath
+the application: networks, Linux servers, containers, and the backends that run on them.
 
-Most of my work is configuring Linux hosts and Nginx, packaging services with Docker, wiring networks
-(DNS, VLANs, MikroTik), and watching it all through Prometheus and Grafana. When a job needs a tool I write
-it in Go, Python or TypeScript. When it needs a device, I still reach for an ESP32.
+I care about the unglamorous parts that keep a system alive after the demo: segmented networks, services
+reached through tunnels instead of open ports, sessions that are hard to hijack, and backups that actually restore.
 
-## Selected work
+### Now
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/parothegreat/claude-hud"><b>claude-hud</b></a><br>
-      <sub><code>Rust</code> <code>ESP32-C3</code> <code>OLED</code></sub>
-      <p>A desk display for Claude Code. An ESP32-C3 drives a 128×64 OLED that shows what the agent is doing, how much of the 5-hour and 7-day limits are used, and when they reset.</p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/parothegreat/go-bot"><b>Nodebuntu Recon Agent</b></a><br>
-      <sub><code>Go</code> <code>LLM agents</code> <code>Linux</code></sub>
-      <p>An autonomous agent on an Ubuntu server. It reasons with an LLM, orchestrates recon tooling, reports CPU, RAM, disk and service health, and only runs commands from an allowlist.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/parothegreat/realtime-hand-fx"><b>realtime-hand-fx</b></a><br>
-      <sub><code>Python</code> <code>MediaPipe</code> <code>Computer vision</code></sub>
-      <p>Real-time visual effects driven by webcam hand tracking, in the style of TouchDesigner installations but written from scratch in Python.</p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/parothegreat/go_http_checker"><b>go_http_checker</b></a><br>
-      <sub><code>Go</code> <code>Concurrency</code> <code>CLI</code></sub>
-      <p>Checks many URLs in parallel with goroutines and channels, sorts results into 2xx, 4xx, 5xx and network errors, and enforces a per-request timeout.</p>
-    </td>
-  </tr>
-</table>
+**CTO — [Klaro](https://klarogerman.de)**<br>
+A German-learning platform. Working with the CEO and the curriculum lead, I own the technical side:
+a Go backend and Next.js front end on PostgreSQL, authentication with Supabase Auth and TOTP, and a
+containerised preview environment on a VPS behind Caddy and Podman. I'm also building Studio, the tool
+the team uses to author lessons.<br>
+<sub><i>Go · Next.js · PostgreSQL · Supabase Auth · Caddy · Podman</i></sub>
 
-## Toolbox
+**Head of IT Team — SMK Mitra Industri MM2100**<br>
+I lead about 37 students across three divisions: web development, maintenance (servers, PCs, CCTV) and
+data (asset inventory). I set up the structure, run recruitment and onboarding for new members, and built
+the registration system for the 2026 intake.
 
-<table>
-  <tr>
-    <td><b>Systems</b></td>
-    <td><img src="https://skillicons.dev/icons?i=linux,fedora,bash,docker,nginx,git,neovim" height="36" alt="Linux, Fedora, Bash, Docker, Nginx, Git, Neovim"></td>
-    <td>Linux, systemd, Nginx, Docker</td>
-  </tr>
-  <tr>
-    <td><b>Networking</b></td>
-    <td></td>
-    <td>TCP/IP, DNS, VLAN, MikroTik</td>
-  </tr>
-  <tr>
-    <td><b>Languages</b></td>
-    <td><img src="https://skillicons.dev/icons?i=go,python,ts,rust,cpp" height="36" alt="Go, Python, TypeScript, Rust, C++"></td>
-    <td>REST services, CLIs, firmware</td>
-  </tr>
-  <tr>
-    <td><b>Data</b></td>
-    <td><img src="https://skillicons.dev/icons?i=postgres,redis" height="36" alt="PostgreSQL, Redis"></td>
-    <td>MariaDB, PostgreSQL, Redis</td>
-  </tr>
-  <tr>
-    <td><b>Observability</b></td>
-    <td><img src="https://skillicons.dev/icons?i=prometheus,grafana" height="36" alt="Prometheus, Grafana"></td>
-    <td>Metrics, dashboards, HTTP checks</td>
-  </tr>
-</table>
+### 01 — Infrastructure
+
+**School network**<br>
+I manage the campus network: per-building VLANs routed on MikroTik, a PoE backbone switch and 19 TP-Link
+Omada access points on a 1 Gbps uplink. I'm now designing a campus-wide layout with a dedicated management
+VLAN and planning the move to Ruijie.<br>
+<sub><i>MikroTik · TP-Link Omada · Ruijie · VLAN · DHCP · DNS</i></sub>
+
+**Self-hosted cloud**<br>
+Nextcloud for the school on Ubuntu Server with Apache and MariaDB, about 3 TB of pooled storage, published
+through Cloudflare Tunnel so nothing is exposed on the public internet.<br>
+<sub><i>Ubuntu · Nextcloud · Apache · MariaDB · Cloudflare Tunnel</i></sub>
+
+### 02 — Software
+
+**[Work Order](https://github.com/teamitmivhs/work-order)**<br>
+The IT team's helpdesk and work-order system for maintenance requests across the school.<br>
+<sub><i>Go · Gin · MySQL · Docker · Nginx</i></sub>
+
+**Mitra Coffeeshop**<br>
+Website for the school's coffee shop, with a cinematic gallery, a CSS-only 3D loyalty card and GoFood ordering.<br>
+<sub><i>TanStack Start · React 19 · Tailwind · Framer Motion</i></sub>
+
+**[Portfolio](https://github.com/parothegreat/parothegreat-portfolio)**<br>
+My personal site: a boot screen, an in-browser Linux terminal and a WebGL skills chart.<br>
+<sub><i>React · Vite · GSAP · Three.js</i></sub>
+
+**Side builds**<br>
+[claude-hud](https://github.com/parothegreat/claude-hud), an ESP32-C3 desk display for Claude Code with firmware in Rust.<br>
+[Nodebuntu Recon Agent](https://github.com/parothegreat/go-bot), an LLM-driven agent for recon and server monitoring, in Go.<br>
+[realtime-hand-fx](https://github.com/parothegreat/realtime-hand-fx), hand-tracked visual effects with MediaPipe.<br>
+[go_http_checker](https://github.com/parothegreat/go_http_checker), a concurrent URL status checker in Go.
+
+### 03 — Research
+
+**FlySight**<br>
+An early-stage computational neuroscience project on the *Drosophila* visual system, built on the MaleCNS
+and FlyWire connectomes through neuPrint. I'm studying motion-sensitive neurons (T5a, LPLC2) and their
+receptive fields, working toward a model that is biologically plausible and can be validated in closed loop.<br>
+<sub><i>Python · PyTorch · CUDA · neuPrint</i></sub>
+
+### On the bench
+
+A Raspberry Pi 4, ESP32 and ESP32-CAM boards, an NXP FRDM-MCXN236 waiting on the 3D-printed case I'm designing
+for it, and a Redmi Note 10 Pro on its way to becoming a Linux cyberdeck.
+
+### Toolbox
+
+**Infrastructure** &nbsp; Linux (Fedora, Ubuntu), Docker, Podman, Nginx, Caddy, Apache, Cloudflare Tunnel, Prometheus, Grafana<br>
+**Networking** &nbsp; VLANs, routing, DHCP, DNS, MikroTik, TP-Link Omada, Ruijie<br>
+**Security** &nbsp; Network segmentation, hardening, recon tooling (subfinder, nuclei, httpx)<br>
+**Backend** &nbsp; Go (Gin), Python, TypeScript, REST, PostgreSQL, MySQL / MariaDB, Redis<br>
+**Frontend** &nbsp; Next.js, React, TanStack Start, Tailwind, GSAP, Three.js<br>
+**Research** &nbsp; PyTorch, CUDA, neuPrint<br>
+**Hardware** &nbsp; ESP32, Raspberry Pi, NXP MCX, embedded Rust
 
 <br>
 
-<p align="center"><sub>Open to conversations about DevOps, infrastructure and embedded projects. Email is the fastest way to reach me.</sub></p>
+<p align="center"><sub>CIKARANG, INDONESIA &nbsp;·&nbsp; UTC+7 &nbsp;·&nbsp; ALVAROPRAYOGO38@GMAIL.COM</sub></p>
