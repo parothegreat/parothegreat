@@ -15,18 +15,18 @@ engineering as CTO of Klaro. I design, deploy and secure what the product runs o
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/klaro-dark.svg">
-  <img src="assets/klaro-light.svg" width="100%" alt="Klaro, a German-learning platform. CTO, in development. Learners and the Studio authoring tool reach Caddy, which serves the Next.js app and the Go API, backed by PostgreSQL and Supabase Auth, all in Podman on a VPS.">
+  <img src="assets/klaro-light.svg" width="100%" alt="Klaro, a German-learning platform. CTO, in development. Architecture: learners and the Studio authoring tool reach Caddy (TLS, HTTP/3) on a VPS, which serves the Next.js frontend and the Go API. The Go API and PostgreSQL 18 run in Podman; a media worker under systemd processes images. Supabase Auth and Cloudflare R2 media storage are managed services.">
 </picture>
 
 ### Built along the way
 
 <p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-cloud-dark.svg"><img src="assets/card-cloud-light.svg" width="49%" alt="Self-hosted cloud and monitoring: Nextcloud on Ubuntu behind Cloudflare Tunnel, Prometheus and Grafana."></picture>
-  <a href="https://github.com/parothegreat/go-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-recon-dark.svg"><img src="assets/card-recon-light.svg" width="49%" alt="Nodebuntu Recon Agent: LLM-driven agent for authorized recon and server monitoring, in Go."></picture></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-cloud-dark.svg"><img src="assets/card-cloud-light.svg" width="49%" alt="Self-hosted cloud and monitoring: Cloudflare Tunnel to Nginx to Nextcloud with zero open ports; Ubuntu hosts scraped by Prometheus and shown in Grafana."></picture>
+  <a href="https://github.com/parothegreat/go-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-recon-dark.svg"><img src="assets/card-recon-light.svg" width="49%" alt="Nodebuntu Recon Agent: a loop from Telegram to a Go agent to an LLM, through a command allowlist to recon tools, with a report sent back to Telegram."></picture></a>
 </p>
 <p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-rfid-dark.svg"><img src="assets/card-rfid-light.svg" width="49%" alt="RFID door access: prototype server-room access control with ESP32-C6, Go, MariaDB and Telegram alerts."></picture>
-  <a href="https://github.com/parothegreat/claude-hud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-claude-hud-dark.svg"><img src="assets/card-claude-hud-light.svg" width="49%" alt="claude-hud: ESP32-C3 OLED desk display for Claude Code, written in Rust."></picture></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-rfid-dark.svg"><img src="assets/card-rfid-light.svg" width="49%" alt="RFID door access: an MFRC522 reader feeds an ESP32-C6 that drives the relay lock; a Go API with MariaDB syncs schedules to it hourly and is operated through Telegram."></picture>
+  <a href="https://github.com/parothegreat/claude-hud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-claude-hud-dark.svg"><img src="assets/card-claude-hud-light.svg" width="49%" alt="claude-hud: Claude Code feeds a Rust bridge that drives an ESP32-C3 and a 128 by 64 OLED at 60 fps, plus a local dashboard."></picture></a>
 </p>
 
 ### Stack
