@@ -1,4 +1,4 @@
-<img src="assets/hero.svg" width="100%" alt="Alvaro Prayogo, CTO at Klaro. Infrastructure only becomes useful when it's understandable, observable, and defensible.">
+<img src="assets/hero.svg" width="100%" alt="Alvaro Prayogo, CTO of Klaro. Infrastructure only becomes useful when it's understandable, observable, and defensible.">
 
 <p align="center">
   <a href="https://parothegreat.site">Portfolio</a>
