@@ -1,4 +1,7 @@
-<img src="assets/hero.svg" width="100%" alt="Alvaro Prayogo, CTO of Klaro. Infrastructure only becomes useful when it's understandable, observable, and defensible.">
+<picture>
+  <source media="(max-width: 700px)" srcset="assets/hero-mobile.svg">
+  <img src="assets/hero.svg" width="100%" alt="Alvaro Prayogo. Infrastructure only becomes useful when it's understandable, observable, and defensible.">
+</picture>
 
 <p align="center">
   <a href="https://parothegreat.site">Portfolio</a>
@@ -8,30 +11,23 @@
   <a href="mailto:alvaroprayogo38@gmail.com">Email</a>
 </p>
 
-I started in industrial electronics, moved into Linux infrastructure, networking and security, and now lead
-engineering as CTO of Klaro. I design, deploy and secure what the product runs on, from the API down to the servers.
+I started in industrial electronics and moved into Linux infrastructure, networking and security.
+I design, deploy and secure what products run on, from the API down to the servers.
 
-### Now
+### Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/klaro-dark.svg">
-  <img src="assets/klaro-light.svg" width="100%" alt="Klaro, a German-learning platform. CTO, in development. Architecture: learners and the Studio authoring tool reach Caddy (TLS, HTTP/3) on a VPS, which serves the Next.js frontend and the Go API. The Go API and PostgreSQL 18 run in Podman; a media worker under systemd processes images. Supabase Auth and Cloudflare R2 media storage are managed services.">
+  <source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/activity-mobile-dark.svg">
+  <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/activity-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parothegreat/parothegreat/output/activity-dark.svg">
+  <img src="https://raw.githubusercontent.com/parothegreat/parothegreat/output/activity-light.svg" width="100%" alt="Contributions over the last 12 months, drawn as weekly columns, with the total, active days and longest streak.">
 </picture>
-
-### Built along the way
-
-<p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-cloud-dark.svg"><img src="assets/card-cloud-light.svg" width="49%" alt="Self-hosted cloud and monitoring: Cloudflare Tunnel to Nginx to Nextcloud with zero open ports; Ubuntu hosts scraped by Prometheus and shown in Grafana."></picture>
-  <a href="https://github.com/parothegreat/go-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-recon-dark.svg"><img src="assets/card-recon-light.svg" width="49%" alt="Nodebuntu Recon Agent: a loop from Telegram to a Go agent to an LLM, through a command allowlist to recon tools, with a report sent back to Telegram."></picture></a>
-</p>
-<p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-rfid-dark.svg"><img src="assets/card-rfid-light.svg" width="49%" alt="RFID door access: an MFRC522 reader feeds an ESP32-C6 that drives the relay lock; a Go API with MariaDB syncs schedules to it hourly and is operated through Telegram."></picture>
-  <a href="https://github.com/parothegreat/claude-hud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-claude-hud-dark.svg"><img src="assets/card-claude-hud-light.svg" width="49%" alt="claude-hud: Claude Code feeds a Rust bridge that drives an ESP32-C3 and a 128 by 64 OLED at 60 fps, plus a local dashboard."></picture></a>
-</p>
 
 ### Stack
 
 <picture>
+  <source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="assets/stack-mobile-dark.svg">
+  <source media="(max-width: 700px)" srcset="assets/stack-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
   <img src="assets/stack-light.svg" width="100%" alt="Languages: Go, TypeScript, Python, Rust, Bash. Web and data: Next.js, React, PostgreSQL, MySQL, Redis, Supabase, Gin. Infrastructure: Linux, Ubuntu, Docker, Nginx, Cloudflare, Git, Fedora, Podman, Caddy. Observability: Prometheus, Grafana, Node Exporter. Networking: MikroTik, TP-Link Omada, Ruijie, Cisco IOS, VLANs, DHCP, DNS. Hardware: Raspberry Pi, Arduino, ESP32, NXP MCX.">
 </picture>

@@ -1,15 +1,26 @@
-"""Builds the profile SVGs in this folder.
+"""Builds the profile SVGs.
 
     pip install fonttools brotli
-    python assets/build.py
+    python assets/build.py                  # hero and stack, into this folder
+    python assets/build.py activity DIR     # the activity panel, into DIR
 
-Plus Jakarta Sans (SIL OFL) and stack icons from skillicons.dev are downloaded once to
-~/.cache and embedded, because GitHub renders SVGs as images that cannot load anything.
-Edit the content below and re-run; don't hand-edit the SVGs (glyphs are subset per file).
+GitHub renders SVGs as images that cannot load anything, so everything is embedded: Plus Jakarta
+Sans (SIL OFL, vendored in assets/fonts) and stack icons from skillicons.dev (downloaded once to
+~/.cache). Edit the content below and re-run; don't hand-edit the SVGs (glyphs are subset per file).
+
+Every panel has a wide version and a "-mobile" one drawn for a phone-width column. The README
+picks between them with <picture media="(max-width: 700px)">.
+
+The activity panel is not kept in this folder. .github/workflows/activity.yml builds it once a day
+and publishes it to the "output" branch, so the main branch's history stays yours.
 """
 import base64
+import datetime as dt
 import io
+import json
+import os
 import re
+import sys
 import urllib.request
 from functools import lru_cache
 from html import escape
@@ -21,13 +32,13 @@ from fontTools.varLib import instancer
 
 HERE = Path(__file__).parent
 CACHE = Path.home() / ".cache" / "parothegreat-fonts"
-FONT_URL = "https://github.com/google/fonts/raw/main/ofl/plusjakartasans/PlusJakartaSans%5Bwght%5D.ttf"
+FONT = HERE / "fonts" / "PlusJakartaSans[wght].ttf"
 WEIGHTS = (400, 600, 800)
 
 THEMES = {
-    "dark": dict(PANEL="#111B2E", BOX="#17243B", RULE="#26385A", INK="#E9EFF8", MUTED="#A3B3CC", FAINT="#7586A3",
+    "dark": dict(PANEL="#111B2E", RULE="#26385A", INK="#E9EFF8", MUTED="#A3B3CC", FAINT="#7586A3",
                  BLUE="#5AA2FF"),
-    "light": dict(PANEL="#F2F6FC", BOX="#FFFFFF", RULE="#D2DDEE", INK="#0F1B2D", MUTED="#4A5B74", FAINT="#7A8AA3",
+    "light": dict(PANEL="#F2F6FC", RULE="#D2DDEE", INK="#0F1B2D", MUTED="#4A5B74", FAINT="#7A8AA3",
                   BLUE="#1660D9"),
 }
 
@@ -46,7 +57,8 @@ def fetch(url, name):
 def font_css(text):
     css = []
     for weight in WEIGHTS:
-        font = instancer.instantiateVariableFont(TTFont(fetch(FONT_URL, "jakarta.ttf")), {"wght": weight})
+        # recalcTimestamp=False keeps the output byte-identical between runs, so CI only commits real changes
+        font = instancer.instantiateVariableFont(TTFont(FONT, recalcTimestamp=False), {"wght": weight})
         opts = subset.Options()
         opts.flavor, opts.layout_features, opts.name_IDs, opts.hinting = "woff2", ["kern"], [1, 2], False
         sub = subset.Subsetter(opts)
@@ -76,6 +88,10 @@ def t(x, y, s, size, weight=400, fill="$INK", anchor=None, extra=""):
     return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{fill}"{a}{extra}>{escape(s)}</text>'
 
 
+def lines(x, y, rows, size, weight=400, fill="$INK", lh=1.4, **kw):
+    return "".join(t(x, y + i * size * lh, row, size, weight, fill, **kw) for i, row in enumerate(rows))
+
+
 _icon_n = 0
 
 
@@ -92,51 +108,45 @@ def skill_icon(name, theme, x, y, size=48):
     return re.sub(r"<svg[^>]*>", f'<svg x="{x}" y="{y}" width="{size}" height="{size}" viewBox="0 0 256 256">', raw, count=1)
 
 
-# ---------------------------------------------------------------- hero (one file, works on both themes)
+# ---------------------------------------------------------------- hero (one file per width, works on both themes)
 
+NAME = "Alvaro Prayogo"
 MOTTO = "Infrastructure only becomes useful when it's understandable, observable, and defensible."
 
 
+def hero_bg(w, h, circles):
+    return ('<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
+            '<stop stop-color="#0A2557"/><stop offset="1" stop-color="#1450B8"/></linearGradient>'
+            f'<clipPath id="card"><rect width="{w}" height="{h}" rx="16"/></clipPath></defs>'
+            f'<rect width="{w}" height="{h}" rx="16" fill="url(#bg)"/><g clip-path="url(#card)" fill="#FFFFFF">'
+            + "".join(f'<circle cx="{cx}" cy="{cy}" r="{r}" opacity="{o}"/>' for cx, cy, r, o in circles) + "</g>")
+
+
 def hero():
-    return "\n".join([
-        '<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
-        '<stop stop-color="#0A2557"/><stop offset="1" stop-color="#1450B8"/></linearGradient></defs>',
-        '<rect width="1200" height="300" rx="16" fill="url(#bg)"/>',
-        '<circle cx="1120" cy="40" r="260" fill="#FFFFFF" opacity=".04"/>',
-        '<circle cx="1160" cy="300" r="170" fill="#FFFFFF" opacity=".05"/>',
-        t(64, 128, "Alvaro Prayogo", 64, 800, "#FFFFFF", extra=' letter-spacing="-1.5"'),
-        t(66, 170, "CTO at Klaro", 24, 600, "#A9CBFF"),
-        '<rect x="66" y="204" width="44" height="3" rx="1.5" fill="#A9CBFF"/>',
-        t(66, 246, MOTTO, 20, 400, "#FFFFFF", extra=' opacity=".9"'),
+    return 1200, 264, "\n".join([
+        hero_bg(1200, 264, [(1120, 30, 250, ".04"), (1160, 264, 160, ".05")]),
+        t(64, 118, NAME, 64, 800, "#FFFFFF", extra=' letter-spacing="-1.5"'),
+        '<rect x="66" y="152" width="44" height="3" rx="1.5" fill="#A9CBFF"/>',
+        t(66, 202, MOTTO, 20, 400, "#FFFFFF", extra=' opacity=".9"'),
     ])
 
 
-# ---------------------------------------------------------------- diagram kit (Klaro + cards)
+def hero_mobile():
+    motto = wrap(MOTTO, 17, 400, 424)
+    h = 158 + len(motto) * 24 + 16
+    return 480, h, "\n".join([
+        hero_bg(480, h, [(450, 10, 150, ".04"), (470, h, 100, ".05")]),
+        t(27, 84, NAME, 47, 800, "#FFFFFF", extra=' letter-spacing="-1.1"'),
+        '<rect x="28" y="112" width="36" height="3" rx="1.5" fill="#A9CBFF"/>',
+        lines(28, 158, motto, 17, 400, "#FFFFFF", lh=24 / 17, extra=' opacity=".9"'),
+    ])
 
-GLYPHS = {  # 24x24 stroke icons for things skillicons doesn't have
-    "users": '<circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 5.2a3.2 3.2 0 0 1 0 6M17.5 13.4c2 .8 3.5 2.9 3.5 5.6"/>',
-    "pen": '<path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4ZM13.5 6.5l4 4"/>',
-    "lock": '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
-    "image": '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="9.5" r="1.6"/><path d="m20.5 16-5-5-8.5 8.5"/>',
-    "cloud": '<path d="M7 19h10.5a4.5 4.5 0 0 0 .6-8.96A6.5 6.5 0 0 0 5.6 8.6 5 5 0 0 0 7 19Z"/>',
-    "send": '<path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7Z"/>',
-    "chat": '<path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke-width="2.6"/>',
-    "shield": '<path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
-    "terminal": '<rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="m7 10 3 2.5L7 15M12.5 15H17"/>',
-    "doc": '<path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
-    "card": '<rect x="2" y="6" width="13" height="12" rx="2"/><path d="M5.5 10h4M5.5 14h6M18 9a4.5 4.5 0 0 1 0 6M20.5 6.5a8 8 0 0 1 0 11"/>',
-    "chip": '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/>',
-    "display": '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h2M11 9h2M7 12h6"/>',
-    "dashboard": '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 16v-3M11 16v-5M15 16v-2"/>',
-    "db": '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
-    "door": '<path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3.5 21h17"/><circle cx="14.5" cy="12.5" r=".6" stroke-width="2.4"/>',
-}
-TILE = {"dark": "#242938", "light": "#F4F2ED"}  # skillicons' neutral tile, so glyph tiles sit next to brand tiles
 
+# ---------------------------------------------------------------- text metrics
 
 @lru_cache
 def _metrics_font(weight):
-    return instancer.instantiateVariableFont(TTFont(fetch(FONT_URL, "jakarta.ttf")), {"wght": weight})
+    return instancer.instantiateVariableFont(TTFont(FONT), {"wght": weight})
 
 
 def tw(s, size, weight):
@@ -146,151 +156,17 @@ def tw(s, size, weight):
     return sum(hmtx[cmap[ord(c)]][0] for c in s) * size / f["head"].unitsPerEm
 
 
-def icon(name, theme, x, y, size):
-    if name in GLYPHS:
-        k = size / 24
-        return (f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="{size * .234:.1f}" fill="{TILE[theme]}"/>'
-                f'<g transform="translate({x + size * .16:g} {y + size * .16:g}) scale({k * .68:.4f})" fill="none" stroke="$BLUE" '
-                f'stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">{GLYPHS[name]}</g>')
-    return skill_icon(name, theme, x, y, size)
-
-
-class Node:
-    def __init__(self, label, ico, x, cy, w, h, sub=None):
-        self.label, self.ico, self.x, self.cy, self.w, self.h, self.sub = label, ico, x, cy, w, h, sub
-
-    l = property(lambda n: n.x)
-    r = property(lambda n: n.x + n.w)
-    cx = property(lambda n: n.x + n.w / 2)
-    top = property(lambda n: n.cy - n.h / 2)
-    bot = property(lambda n: n.cy + n.h / 2)
-
-    def draw(self, theme):
-        big = self.sub is not None
-        pad, size, size_t = (12, 32, 14.5) if big else (9, 26, 14)
-        tx = self.x + pad + size + (11 if big else 9)
-        assert tx + tw(self.label, size_t, 700) <= self.r - 6, f"label too long: {self.label}"
-        out = [f'<rect x="{self.x:g}" y="{self.top:g}" width="{self.w}" height="{self.h}" rx="{11 if big else 10}" fill="$BOX" stroke="$RULE"/>',
-               icon(self.ico, theme, self.x + pad, self.cy - size / 2, size)]
-        if big:
-            out += [t(tx, self.cy - 3, self.label, size_t, 700), t(tx, self.cy + 15, self.sub, 12.5, 400, "$FAINT")]
+def wrap(s, size, weight, max_w):
+    """Greedy line breaks measured with the real font."""
+    rows, row = [], ""
+    for word in s.split():
+        trial = f"{row} {word}".strip()
+        if row and tw(trial, size, weight) > max_w:
+            rows.append(row)
+            row = word
         else:
-            out.append(t(tx, self.cy + 5, self.label, size_t, 700))
-        return "".join(out)
-
-
-def link(a, b, mx=None):
-    """Path from node a to node b: straight when aligned, otherwise one elbow through the gap."""
-    if a.cy == b.cy:
-        x1, x2 = (a.r, b.l) if b.x > a.x else (a.l, b.r)
-        return f"M{x1:g} {a.cy:g}H{x2:g}"
-    if a.cx == b.cx:
-        y1, y2 = (a.bot, b.top) if b.cy > a.cy else (a.top, b.bot)
-        return f"M{a.cx:g} {y1:g}V{y2:g}"
-    x1, x2 = (a.r, b.l) if b.x > a.x else (a.l, b.r)
-    mx = (x1 + x2) / 2 if mx is None else mx
-    return f"M{x1:g} {a.cy:g}H{mx:g}V{b.cy:g}H{x2:g}"
-
-
-def flow(d, dur=1.4):
-    """A wire with packets moving along it in the direction it was drawn."""
-    return (f'<path d="{d}" fill="none" stroke="$RULE" stroke-width="2" stroke-linejoin="round"/>'
-            f'<path d="{d}" fill="none" stroke="$BLUE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 10">'
-            f'<animate attributeName="stroke-dashoffset" from="28" to="0" dur="{dur}s" repeatCount="indefinite"/></path>')
-
-
-def zone(x, y, w, h, label, theme):
-    """Dashed boundary with its label set into the line, like a fieldset legend."""
-    lw = tw(label, 12, 700) + 16
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="none" stroke="$RULE" stroke-width="1.5" stroke-dasharray="6 6"/>'
-            f'<rect x="{x + 18}" y="{y - 9}" width="{lw:.0f}" height="18" fill="$PANEL"/>'
-            + t(x + 26, y + 4.5, label, 12, 700, "$FAINT", extra=' letter-spacing=".6"'))
-
-
-def diagram(nodes, links, theme):
-    return "\n".join([flow(d) for d in links] + [n.draw(theme) for n in nodes.values()])
-
-
-# ---------------------------------------------------------------- Klaro
-
-KLARO_H = 452
-
-
-def klaro(theme):
-    W, H = 176, 56
-    c = [36, 268, 488, 708, 952]           # column x
-    r = [244, 322, 400]                     # row centre y
-    half = lambda i: (r[i] + r[i + 1]) / 2  # noqa: E731
-    N = {k: Node(label, ico, c[col], y, W, H, sub) for k, label, ico, col, y, sub in [
-        ("learn", "Learners", "users", 0, half(0), "Browser"),
-        ("studio", "Studio", "pen", 0, half(1), "Authoring tool"),
-        ("caddy", "Caddy", "lock", 1, r[1], "TLS · HTTP/3"),
-        ("web", "Next.js", "nextjs", 2, r[0], "Web frontend"),
-        ("api", "Go API", "go", 2, r[1], "REST · Podman"),
-        ("media", "Media worker", "image", 2, r[2], "WebP · systemd"),
-        ("pg", "PostgreSQL", "postgres", 3, r[1], "v18 · Podman"),
-        ("auth", "Supabase Auth", "supabase", 4, r[0], "Identity"),
-        ("r2", "Cloudflare R2", "cloudflare", 4, r[2], "Media storage"),
-    ]}
-    gap_api_pg = (N["api"].r + N["pg"].l) / 2
-    links = [link(N["learn"], N["caddy"], 232), link(N["studio"], N["caddy"], 232),  # merge left of the VPS line
-             link(N["caddy"], N["web"]), link(N["caddy"], N["api"]), link(N["web"], N["api"]),
-             link(N["api"], N["pg"]),
-             f'M{N["api"].r:g} {r[1]}H{gap_api_pg:g}V{r[0]}H{N["auth"].l:g}',     # over the empty slot above PostgreSQL
-             link(N["media"], N["r2"]),
-             f'M{N["media"].r:g} {r[2]}H{N["pg"].cx:g}V{N["pg"].bot:g}']
-
-    title_w = tw("Klaro", 36, 800)
-    out = [f'<rect width="1200" height="{KLARO_H}" rx="16" fill="$PANEL"/>',
-           t(44, 82, "Klaro", 36, 800, extra=' letter-spacing="-.5"'),
-           # status: a slow pulse, because it's the one thing on this page that is live
-           f'<circle cx="{66 + title_w:g}" cy="70" r="9" fill="#F5A524" opacity=".25">'
-           '<animate attributeName="r" values="5;10;5" dur="2.4s" repeatCount="indefinite"/>'
-           '<animate attributeName="opacity" values=".35;0;.35" dur="2.4s" repeatCount="indefinite"/></circle>',
-           f'<circle cx="{66 + title_w:g}" cy="70" r="4.5" fill="#F5A524"/>',
-           t(80 + title_w, 75, "In development", 15, 600, "$MUTED"),
-           t(44, 118, "CTO  ·  A German-learning platform. I lead engineering end to end, from the architecture to the servers it runs on.",
-             16, 400, "$MUTED"),
-           zone(c[1] - 16, 172, c[3] + W + 24 - (c[1] - 16), 268, "VPS", theme),
-           zone(c[4] - 24, 172, W + 48, 268, "MANAGED", theme),
-           diagram(N, links, theme)]
-    return "\n".join(out)
-
-
-# ---------------------------------------------------------------- project cards
-
-CARD_W, CARD_H = 580, 268
-COLS, ROWS, NODE_W = [32, 218, 404], [150, 214], 144
-
-CARDS = [  # id, title, one line, nodes {key: (label, icon, col, row)}, links (from, to), repo
-    ("cloud", "Self-hosted cloud & monitoring", "Private cloud with zero open ports, plus host monitoring.",
-     {"cf": ("Tunnel", "cloudflare", 0, 0), "nginx": ("Nginx", "nginx", 1, 0), "nc": ("Nextcloud", "cloud", 2, 0),
-      "host": ("Ubuntu host", "ubuntu", 0, 1), "prom": ("Prometheus", "prometheus", 1, 1), "graf": ("Grafana", "grafana", 2, 1)},
-     [("cf", "nginx"), ("nginx", "nc"), ("host", "prom"), ("prom", "graf")], False),
-    ("recon", "Nodebuntu Recon Agent", "Autonomous recon loop. Every command passes an allowlist.",
-     {"tg": ("Telegram", "send", 0, 0), "go": ("Go agent", "go", 1, 0), "llm": ("LLM", "chat", 2, 0),
-      "allow": ("Allowlist", "shield", 2, 1), "tools": ("Recon tools", "terminal", 1, 1), "rep": ("Report", "doc", 0, 1)},
-     [("tg", "go"), ("go", "llm"), ("llm", "allow"), ("allow", "tools"), ("tools", "rep"), ("rep", "tg")], True),
-    ("rfid", "RFID door access", "Server-room door with offline card checks and hourly sync.",
-     {"card": ("MFRC522", "card", 0, 0), "esp": ("ESP32-C6", "chip", 1, 0), "lock": ("Relay lock", "door", 2, 0),
-      "tg": ("Telegram", "send", 0, 1), "api": ("Go API", "go", 1, 1), "db": ("MariaDB", "db", 2, 1)},
-     [("card", "esp"), ("esp", "lock"), ("tg", "api"), ("api", "esp"), ("api", "db")], False),
-    ("claude-hud", "claude-hud", "Claude Code state and usage limits on a desk OLED, at 60 fps.",
-     {"cc": ("Claude Code", "terminal", 0, 0), "br": ("Rust bridge", "rust", 1, 0), "esp": ("ESP32-C3", "chip", 2, 0),
-      "dash": ("Dashboard", "dashboard", 1, 1), "oled": ("OLED 128×64", "display", 2, 1)},
-     [("cc", "br"), ("br", "esp"), ("br", "dash"), ("esp", "oled")], True),
-]
-
-
-def card(title, line, nodes, links, linked, theme):
-    N = {k: Node(label, ico, COLS[col], ROWS[row], NODE_W, 44) for k, (label, ico, col, row) in nodes.items()}
-    out = [f'<rect width="{CARD_W}" height="{CARD_H}" rx="16" fill="$PANEL"/>',
-           t(32, 58, title, 24, 800, extra=' letter-spacing="-.3"'),
-           t(32, 88, line, 15, 400, "$MUTED"),
-           diagram(N, [link(N[a], N[b]) for a, b in links], theme)]
-    if linked:
-        out.append('<path d="M534 38h12v12M546 38l-14 14" fill="none" stroke="$BLUE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>')
-    return "\n".join(out)
+            row = trial
+    return rows + [row]
 
 
 # ---------------------------------------------------------------- stack
@@ -323,15 +199,144 @@ def stack(theme):
     return h, "\n".join(out)
 
 
+def stack_mobile(theme):
+    out, y = [], 12
+    for r, (label, icons, extra) in enumerate(STACK):
+        if r:
+            out.append(f'<line x1="24" y1="{y}" x2="456" y2="{y}" stroke="$RULE"/>')
+        out.append(t(28, y + 34, label, 16.5, 800))
+        y += 50
+        x = 28
+        for name in icons:
+            out.append(skill_icon(name, theme, x, y, 46))
+            x += 56
+        if extra:
+            beside = icons and x + 6 + tw(extra, 15.5, 400) <= 452
+            if icons and not beside:
+                y += 46 + 10
+            rows = [extra] if beside else wrap(extra, 15.5, 400, 424)
+            out.append(lines(x + 6 if beside else 28, y + (29 if beside else 16), rows, 15.5, 400, "$MUTED", lh=23 / 15.5))
+            y += 46 if beside else len(rows) * 23
+        else:
+            y += 46
+        y += 18
+    h = y + 6
+    return 480, h, f'<rect width="480" height="{h}" rx="16" fill="$PANEL"/>' + "\n".join(out)
+
+
+# ---------------------------------------------------------------- activity (built by .github/workflows/activity.yml)
+
+def fetch_activity(path):
+    """Last year's public contribution calendar, as the profile page shows it."""
+    query = ("query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{"
+             "weeks{contributionDays{date contributionCount}}}}}}")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=json.dumps({"query": query, "variables": {"login": os.environ["GITHUB_LOGIN"]}}).encode(),
+        headers={"Authorization": "bearer " + os.environ["GITHUB_TOKEN"], "User-Agent": "profile-readme-build"})
+    reply = json.load(urllib.request.urlopen(req, timeout=30))
+    assert "errors" not in reply, reply["errors"]
+    weeks = reply["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+    rows = [json.dumps([[d["date"], d["contributionCount"]] for d in w["contributionDays"]]) for w in weeks]
+    path.write_text('{"weeks": [\n' + ",\n".join(rows) + "\n]}\n")
+
+
+def activity_stats(path):
+    weeks = json.loads(path.read_text())["weeks"]
+    days = [n for w in weeks for _, n in w]
+    longest = run = 0
+    for n in days:
+        run = run + 1 if n else 0
+        longest = max(longest, run)
+    return dict(weeks=[(dt.date.fromisoformat(w[0][0]), sum(n for _, n in w)) for w in weeks],
+                total=sum(days), active=sum(1 for n in days if n), longest=longest)
+
+
+def nice_ticks(top, n=3):
+    """Round axis steps (1, 2 or 5 times a power of ten) that cover top in about n intervals."""
+    raw, mag = max(top, 1) / n, 1
+    while mag * 10 <= raw:
+        mag *= 10
+    step = next(m * mag for m in (1, 2, 5, 10) if m * mag >= raw)
+    return [step * i for i in range(int(-(-max(top, 1) // step)) + 1)]
+
+
+def columns(weeks, x0, x1, y0, y1, gap=3, max_bar=24):
+    """Weekly columns: rounded data-end, square on the baseline, hairline grid, the peak labelled."""
+    ticks = nice_ticks(max(n for _, n in weeks))
+    scale = (y1 - y0) / ticks[-1]
+    pitch = (x1 - x0) / len(weeks)
+    bw = min(max_bar, pitch - gap)
+    out = []
+    for v in ticks:
+        y = y1 - v * scale
+        out.append(f'<line x1="{x0}" y1="{y:g}" x2="{x1}" y2="{y:g}" stroke="$RULE"/>')
+        out.append(t(x0 - 10, y + 4, f"{v:,}", 12, 400, "$FAINT", "end"))
+    peak = max(range(len(weeks)), key=lambda i: weeks[i][1])
+    last_label = -1e9
+    for i, (day, n) in enumerate(weeks):
+        x = x0 + i * pitch + (pitch - bw) / 2
+        if n:
+            hgt, rad = max(n * scale, 2), min(4, bw / 2, max(n * scale, 2))
+            out.append(f'<path d="M{x:.1f} {y1}v{-(hgt - rad):.1f}q0 {-rad:g} {rad:g} {-rad:g}h{bw - 2 * rad:.1f}q{rad:g} 0 {rad:g} {rad:g}v{hgt - rad:.1f}z" fill="$BLUE"/>')
+        if i == peak and n and n < ticks[-1] - 12 / scale:
+            out.append(t(x + bw / 2, y1 - n * scale - 7, f"{n:,}", 12, 600, "$MUTED", "middle"))
+        first = day + dt.timedelta(days=6)                      # label a month at the week it starts in
+        if i and first.month != (weeks[i - 1][0] + dt.timedelta(days=6)).month and x - last_label > 44 and x < x1 - 24:
+            out.append(t(x, y1 + 21, first.strftime("%b"), 12, 400, "$FAINT"))
+            last_label = x
+    return "".join(out)
+
+
+def activity(a):
+    out = ['<rect width="1200" height="284" rx="16" fill="$PANEL"/>',
+           t(42, 104, f"{a['total']:,}", 60, 800, extra=' letter-spacing="-1.5"'),
+           t(44, 136, "contributions in the last 12 months, by week", 16, 400, "$MUTED"),
+           t(44, 200, f"{a['active']:,}", 22, 800), t(44, 221, "active days", 13, 400, "$FAINT"),
+           t(176, 200, f"{a['longest']:,} day{'s' * (a['longest'] != 1)}", 22, 800), t(176, 221, "longest streak", 13, 400, "$FAINT"),
+           columns(a["weeks"], 468, 1156, 48, 226)]
+    return 1200, 284, "\n".join(out)
+
+
+def activity_mobile(a):
+    out = ['<rect width="480" height="360" rx="16" fill="$PANEL"/>',
+           t(27, 76, f"{a['total']:,}", 50, 800, extra=' letter-spacing="-1.2"'),
+           t(28, 104, "contributions in the last 12 months, by week", 15.5, 400, "$MUTED"),
+           t(28, 152, f"{a['active']:,}", 20, 800), t(28, 172, "active days", 13, 400, "$FAINT"),
+           t(160, 152, f"{a['longest']:,} day{'s' * (a['longest'] != 1)}", 20, 800), t(160, 172, "longest streak", 13, 400, "$FAINT"),
+           columns(a["weeks"], 62, 452, 210, 312, gap=2.4)]
+    return 480, 360, "\n".join(out)
+
+
+# ---------------------------------------------------------------- build
+
+def write(folder, name, title, panel, theme=None):
+    w, h, body = panel
+    (folder / f"{name}{'-' + theme if theme else ''}.svg").write_text(svg(w, h, title, body, theme))
+
+
+def build_activity(folder):
+    """With GITHUB_TOKEN and GITHUB_LOGIN set, fetches fresh numbers; otherwise redraws DIR/activity.json."""
+    folder.mkdir(parents=True, exist_ok=True)
+    if os.environ.get("GITHUB_LOGIN"):
+        fetch_activity(folder / "activity.json")
+    a = activity_stats(folder / "activity.json")
+    title = f"{a['total']:,} contributions in the last 12 months, drawn as weekly columns."
+    for theme in THEMES:
+        write(folder, "activity", title, activity(a), theme)
+        write(folder, "activity-mobile", title, activity_mobile(a), theme)
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["activity"]:
+        build_activity(Path(sys.argv[2]))
+        sys.exit()
     for old in HERE.glob("*.svg"):
         old.unlink()
-    (HERE / "hero.svg").write_text(svg(1200, 300, f"Alvaro Prayogo, CTO at Klaro. {MOTTO}", hero()))
+    write(HERE, "hero", f"{NAME}. {MOTTO}", hero())
+    write(HERE, "hero-mobile", f"{NAME}. {MOTTO}", hero_mobile())
     for theme in THEMES:
-        (HERE / f"klaro-{theme}.svg").write_text(svg(1200, KLARO_H, "Klaro: German-learning platform", klaro(theme), theme))
-        for cid, title, line, nodes, links, linked in CARDS:
-            (HERE / f"card-{cid}-{theme}.svg").write_text(
-                svg(CARD_W, CARD_H, f"{title}: {line}", card(title, line, nodes, links, linked, theme), theme))
         h, body = stack(theme)
-        (HERE / f"stack-{theme}.svg").write_text(svg(1200, h, "Stack", body, theme))
+        write(HERE, "stack", "Stack", (1200, h, body), theme)
+        write(HERE, "stack-mobile", "Stack", stack_mobile(theme), theme)
     print("built", len(list(HERE.glob("*.svg"))), "svgs")
